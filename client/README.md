@@ -1,11 +1,11 @@
-#install
+## install
 
 make sure you have installed *yarn* 
 ```
 yarn install
 ```
 
-#run
+## run
 ```
 yarn start
 ```
@@ -19,11 +19,11 @@ yarn run ios/android
 ```
 This gonna work it most cases but sometimes it does not. Then use Expo ;)
 
-#debug 
+## debug 
 if you wish to debug, shake your phone and chose *Debug JS Remotely*. It will be replaced by *React Native Debugger* in future.
 
 
 
 
-#adding dependencies
-If you add some dependencies, make sure it works both on Android and iOS. If you cannot test it on some of these platform, add it below
+## adding dependencies
+If you add some dependencies, make sure it works both on Android and iOS. If you cannot test it on some of these platform, let us know
