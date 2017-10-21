@@ -1,15 +1,19 @@
 import React from "react";
-import {ScrollView, Text} from "react-native";
+import {ScrollView, Text, View} from "react-native";
 import {DrawerItems} from "react-navigation";
 
 const DrawerContent = (props) => (
-  <ScrollView>
+  <View style={{flex: 1}}>
+    <ScrollView>
+      <Text>
+        Tu będzie logo SFI
+      </Text>
+      <DrawerItems {...props} />
+    </ScrollView>
     <Text>
-      Tu będzie logo SFI
-      {Config.ToolbarHeight}
+      :)
     </Text>
-    <DrawerItems {...props} />
-  </ScrollView>
+  </View>
 );
 
 export default DrawerContent

@@ -5,6 +5,10 @@ import DrawerContent from "./Drawer/DrawerContent";
 import ContactScreen from "./Screens/Contact/ContactScreen";
 import CodesScreen from "./Screens/Codes/CodesScreen";
 import AgendaScreen from "./Screens/Agenda/AgendaScreen";
+import SettingsScreen from "./Screens/Settings/SettingsScreen";
+import T from "./Translation/Translator";
+import Config from "./Utils/Config";
+import {Text} from "react-native";
 
 
 const DrawerNavigation = DrawerNavigator(
@@ -24,6 +28,10 @@ const DrawerNavigation = DrawerNavigator(
     Contact: {
       path: '/Contact',
       screen: ContactScreen,
+    },
+    Settings: {
+      path: '/Settings',
+      screen: SettingsScreen
     }
   },
   {
@@ -35,5 +43,24 @@ const DrawerNavigation = DrawerNavigator(
   }
 );
 
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {loaded: false};
+    T.init().then(() => this.setState({loaded: true}))
+  }
 
-export default DrawerNavigation;
+  render() {
+    if (!this.state.loaded)
+      return (
+        <Text>
+          Loading...
+        </Text>
+      );
+    return (
+      <DrawerNavigation/>
+    );
+  }
+}
+
+export default App;

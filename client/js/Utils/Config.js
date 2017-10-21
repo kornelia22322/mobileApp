@@ -1,4 +1,4 @@
-Config = {
+export default Config = {
 
   MainColor: '#6335e7', //Color of accents. Core of app design
   SupportiveColor: '#acacac', //Default color for components
