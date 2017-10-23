@@ -1,4 +1,5 @@
 import ClientStorage from "../Utils/ClientStorage";
+import Translations from "./Translations";
 export default class T {
   static locale = "en";
 
@@ -9,6 +10,19 @@ export default class T {
     const locale = await ClientStorage.getLocale();
     console.log(locale);
     this.locale = locale;
+  }
+
+  static getTranslation(id) {
+    const names = id.split(".");
+    let obj = Translations[this.locale];
+    names.forEach(name => {
+      if (obj[name] === null)
+        return id;
+      else
+        obj = obj[name];
+    });
+    return obj;
+
   }
 
   static switchLanguage(newLanguage) {

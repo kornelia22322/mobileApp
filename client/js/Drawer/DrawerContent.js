@@ -1,8 +1,8 @@
 import React from "react";
 import {ScrollView, Text, View} from "react-native";
 import {DrawerItems} from "react-navigation";
-
 const DrawerContent = (props) => (
+
   <View style={{flex: 1}}>
     <ScrollView>
       <Text>
@@ -14,6 +14,7 @@ const DrawerContent = (props) => (
       :)
     </Text>
   </View>
+
 );
 
 export default DrawerContent

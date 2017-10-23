@@ -1,5 +1,5 @@
 import React from "react";
-import {ScrollView, StyleSheet, TouchableOpacity} from "react-native";
+import {ScrollView, StyleSheet, Text, TouchableOpacity} from "react-native";
 import DrawerIcon from "../../Drawer/DrawerIcon";
 import Toolbar from "../Base/Toolbar";
 import Scene from "../../GlamorousComponents/Scene";
@@ -7,6 +7,8 @@ import T from "../../Translation/Translator";
 import SupportedLanguages from "../../Translation/SupportedLanguages";
 import {IntlText} from "../../Translation/IntlText";
 import DrawerComponent from "../../GlamorousComponents/DrawerComponent";
+import TranslatableComponent from "../../Translation/Translations/TranslatableComponent";
+
 class SettingsScreen extends React.Component {
   constructor(props) {
     super(props);
@@ -33,7 +35,18 @@ class SettingsScreen extends React.Component {
           >
             <IntlText id={`settings.changeLanguage`}/>
             <IntlText id={`languages.${T.locale}`}/>
+
           </TouchableOpacity>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('News')}>
+            <Text>
+              News
+            </Text>
+          </TouchableOpacity>
+          <TranslatableComponent>
+            <Text>
+              {T.getTranslation("drawer.news")}
+            </Text>
+          </TranslatableComponent>
         </ScrollView>
       </Scene>
     )
