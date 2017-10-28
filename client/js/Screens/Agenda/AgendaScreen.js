@@ -5,7 +5,8 @@ import Scene from "../../GlamorousComponents/Scene";
 import Toolbar from "../Base/Toolbar";
 import DrawerComponent from "../../GlamorousComponents/DrawerComponent";
 import {IntlText} from "../../Translation/IntlText";
-const AgendaScreen = ({navigation}) => (
+
+const AgendaScreen = ({ navigation }) => (
   <Scene>
     <Toolbar/>
     <ScrollView>
@@ -25,5 +26,5 @@ AgendaScreen.navigationOptions = {
   ),
 };
 
-export default AgendaScreen
+export default AgendaScreen;
 

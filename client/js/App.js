@@ -10,7 +10,6 @@ import T from "./Translation/Translator";
 import Config from "./Utils/Config";
 import {Text} from "react-native";
 
-
 const DrawerNavigation = DrawerNavigator(
   {
     News: {

@@ -1,1 +1,1 @@
-//tuędzie mock server
+// Here will be mock.

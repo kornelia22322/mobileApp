@@ -1,6 +1,3 @@
-/**
- * Created by micosa on 20.10.17.
- */
 import React from "react";
 import {ScrollView, Text} from "react-native";
 import DrawerIcon from "../../Drawer/DrawerIcon";
@@ -8,7 +5,8 @@ import Toolbar from "../Base/Toolbar";
 import Scene from "../../GlamorousComponents/Scene";
 import DrawerComponent from "../../GlamorousComponents/DrawerComponent";
 import {IntlText} from "../../Translation/IntlText";
-const CodesScreen = ({navigation}) => (
+
+const CodesScreen = ({ navigation }) => (
   <Scene>
     <Toolbar/>
     <ScrollView>
@@ -18,6 +16,7 @@ const CodesScreen = ({navigation}) => (
     </ScrollView>
   </Scene>
 );
+
 CodesScreen.navigationOptions = {
   drawerLabel: <DrawerComponent>
     <IntlText id="drawer.codes"/>

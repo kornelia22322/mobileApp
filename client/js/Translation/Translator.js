@@ -1,15 +1,15 @@
 import ClientStorage from "../Utils/ClientStorage";
 import Translations from "./Translations";
+
 export default class T {
+  static refs = [];  
   static locale = "en";
-
   static _timeoutId;
-
 
   static async init() {
     const locale = await ClientStorage.getLocale();
     console.log(locale);
-    
+
     if (locale)
       this.locale = locale;
     else 
@@ -52,8 +52,6 @@ export default class T {
     //It debounces changes
   }
 
-  static refs = [];
-
   static _repairRefArray() {
     const newRefs = [];
     this.refs.forEach((ref) => {
@@ -64,5 +62,4 @@ export default class T {
     );
     this.refs = newRefs;
   }
-
 }

@@ -11,7 +11,7 @@ import TranslatableComponent from "../../Translation/Translations/TranslatableCo
 
 class SettingsScreen extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       language: T.locale
     }
@@ -68,7 +68,3 @@ export default SettingsScreen
 const styles = StyleSheet.create({
   container: {},
 });
-
-
-
-

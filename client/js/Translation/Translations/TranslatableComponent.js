@@ -1,6 +1,7 @@
 import React from "react";
 import T from "../Translator";
 import {View} from "react-native";
+
 export default class TranslatableComponent extends React.Component {
   constructor(props) {
     super(props);
