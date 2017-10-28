@@ -1,8 +1,9 @@
 ## install
 
-make sure you have installed *yarn* 
+make sure you have installed *yarn* and *npm*
 ```
-yarn install
+npm install -g react-native-cli
+yarn
 ```
 
 ## run
@@ -11,13 +12,15 @@ yarn start
 ```
 to trigger packager. It's essential to run app in dev environment. Packager reloads your JS code and compiles it to native (iOS/Android) code.
 
-If you wish to run in on device, use install Expo (AppStore/Google Play) and scan QR code from your packager terminal (note that you should use same wifi network!). 
+You should use XCode (iOS - mac only) or Android Studio in order to use Virtual Device, but then you need to configure it. In XCode it should work out of box, but on Android you should install SDK and AVD to emulate.  
 
-You can also use XCode (iOS - mac only) or Android Studio in order to use Virtual Device and be more _hackerlike_, but then you need to configure it. In XCode it should work out of box, but on Android you should install SDK and AVD to emulate.
+Just follow: 
+https://facebook.github.io/react-native/releases/0.23/docs/android-setup.html
+https://facebook.github.io/react-native/docs/getting-started.html (but use `npm install -g react-native-cli` instead of `npm install -g create-react-native-app`)
 ```
 yarn run ios/android
 ```
-This gonna work it most cases but sometimes it does not. Then use Expo ;)
+This gonna work it most cases but sometimes it does not ;)
 
 ## debug 
 if you wish to debug, shake your phone and chose *Debug JS Remotely*. It will be replaced by *React Native Debugger* in future.
