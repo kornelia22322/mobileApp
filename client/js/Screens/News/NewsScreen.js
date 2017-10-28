@@ -1,12 +1,12 @@
-import React from "react";
-import {ScrollView, StyleSheet, Text} from "react-native";
-import DrawerIcon from "../../Drawer/DrawerIcon";
-import Toolbar from "../Base/Toolbar";
-import Scene from "../../GlamorousComponents/Scene";
-import {IntlText} from "../../Translation/IntlText";
-import DrawerComponent from "../../GlamorousComponents/DrawerComponent";
+import React from 'react';
+import { ScrollView, StyleSheet, Text } from 'react-native';
+import DrawerIcon from '../../Drawer/DrawerIcon';
+import Toolbar from '../Base/Toolbar';
+import Scene from '../../GlamorousComponents/Scene';
+import { IntlText } from '../../Translation/IntlText';
+import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
 
-const NewsScreen = ({navigation}) => (
+const NewsScreen = ({ navigation }) => (
   <Scene>
     <Toolbar/>
     <ScrollView>
@@ -27,12 +27,4 @@ NewsScreen.navigationOptions = {
   ),
 };
 
-export default NewsScreen
-
-const styles = StyleSheet.create({
-  container: {},
-});
-
-
-
-
+export default NewsScreen;

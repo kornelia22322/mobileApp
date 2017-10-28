@@ -1,6 +1,6 @@
-import React from "react";
-import MaterialIcons from "react-native-vector-icons/MaterialIcons";
-import Config from "../Utils/Config";
+import React from 'react';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Config from '../Utils/Config';
 
 const DrawerIcon = (props) => (
   <MaterialIcons
@@ -10,4 +10,4 @@ const DrawerIcon = (props) => (
   />
 );
 
-export default DrawerIcon
+export default DrawerIcon;

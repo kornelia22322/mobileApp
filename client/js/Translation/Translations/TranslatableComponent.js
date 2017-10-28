@@ -1,6 +1,6 @@
-import React from "react";
-import T from "../Translator";
-import {View} from "react-native";
+import React from 'react';
+import T from '../Translator';
+import { View } from 'react-native';
 
 export default class TranslatableComponent extends React.Component {
   constructor(props) {
@@ -17,6 +17,6 @@ export default class TranslatableComponent extends React.Component {
       <View style={{flex: 1}}>
         {this.props.children}
       </View>
-    )
+    );
   }
 }

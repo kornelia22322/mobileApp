@@ -1,6 +1,7 @@
-import React from "react";
-import {View} from "react-native";
-import DesignUtils from "../../Utils/DesignUtils";
+import React from 'react';
+import { View } from 'react-native';
+import DesignUtils from '../../Utils/DesignUtils';
+import Config from '../../Utils/Config';
 
 const Toolbar = () => (
   <View style={[{
@@ -8,10 +9,9 @@ const Toolbar = () => (
     height: Config.ToolbarHeight,
     backgroundColor: Config.MainColor
   },
-    DesignUtils.getShadowStyle(2)
+  DesignUtils.getShadowStyle(2)
   ]}>
   </View>
 );
 
-
-export default Toolbar
+export default Toolbar;

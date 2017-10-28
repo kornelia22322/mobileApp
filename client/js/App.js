@@ -1,14 +1,14 @@
-import React from "react";
-import {DrawerNavigator} from "react-navigation";
-import NewsScreen from "./Screens/News/NewsScreen";
-import DrawerContent from "./Drawer/DrawerContent";
-import ContactScreen from "./Screens/Contact/ContactScreen";
-import CodesScreen from "./Screens/Codes/CodesScreen";
-import AgendaScreen from "./Screens/Agenda/AgendaScreen";
-import SettingsScreen from "./Screens/Settings/SettingsScreen";
-import T from "./Translation/Translator";
-import Config from "./Utils/Config";
-import {Text} from "react-native";
+import React from 'react';
+import {DrawerNavigator} from 'react-navigation';
+import NewsScreen from './Screens/News/NewsScreen';
+import DrawerContent from './Drawer/DrawerContent';
+import ContactScreen from './Screens/Contact/ContactScreen';
+import CodesScreen from './Screens/Codes/CodesScreen';
+import AgendaScreen from './Screens/Agenda/AgendaScreen';
+import SettingsScreen from './Screens/Settings/SettingsScreen';
+import T from './Translation/Translator';
+import Config from './Utils/Config';
+import { Text } from 'react-native';
 
 const DrawerNavigation = DrawerNavigator(
   {

@@ -1,6 +1,6 @@
-import React from "react";
-import T from "./Translator";
-import {Text} from "react-native";
+import React from 'react';
+import T from './Translator';
+import { Text } from 'react-native';
 
 export class IntlText extends React.Component {
   constructor(props) {
@@ -17,6 +17,6 @@ export class IntlText extends React.Component {
       <Text style={this.props.style}>
         {T.getTranslation(this.props.id)}
       </Text>
-    )
+    );
   }
 }

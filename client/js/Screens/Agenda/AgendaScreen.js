@@ -1,10 +1,10 @@
 import React from "react";
 import {ScrollView, Text} from "react-native";
-import DrawerIcon from "../../Drawer/DrawerIcon";
-import Scene from "../../GlamorousComponents/Scene";
-import Toolbar from "../Base/Toolbar";
-import DrawerComponent from "../../GlamorousComponents/DrawerComponent";
-import {IntlText} from "../../Translation/IntlText";
+import DrawerIcon from '../../Drawer/DrawerIcon';
+import Scene from '../../GlamorousComponents/Scene';
+import Toolbar from '../Base/Toolbar';
+import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
+import { IntlText } from '../../Translation/IntlText';
 
 const AgendaScreen = ({ navigation }) => (
   <Scene>

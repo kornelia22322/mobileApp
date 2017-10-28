@@ -1,4 +1,5 @@
-import {Platform} from "react-native";
+import {Platform} from 'react-native';
+
 class DesignUtils {
   static getShadowStyle(elevation) {
     if (Platform.OS === 'ios')
@@ -9,10 +10,8 @@ class DesignUtils {
         shadowRadius: elevation - 1
       };
     else
-      return {
-        elevation: elevation
-      }
+      return { elevation: elevation };
   }
 }
 
-export default DesignUtils
+export default DesignUtils;

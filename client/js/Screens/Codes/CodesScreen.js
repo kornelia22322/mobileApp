@@ -1,10 +1,10 @@
-import React from "react";
-import {ScrollView, Text} from "react-native";
-import DrawerIcon from "../../Drawer/DrawerIcon";
-import Toolbar from "../Base/Toolbar";
-import Scene from "../../GlamorousComponents/Scene";
-import DrawerComponent from "../../GlamorousComponents/DrawerComponent";
-import {IntlText} from "../../Translation/IntlText";
+import React from 'react';
+import { ScrollView, Text } from 'react-native';
+import DrawerIcon from '../../Drawer/DrawerIcon';
+import Toolbar from '../Base/Toolbar';
+import Scene from '../../GlamorousComponents/Scene';
+import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
+import { IntlText } from '../../Translation/IntlText';
 
 const CodesScreen = ({ navigation }) => (
   <Scene>
@@ -26,8 +26,4 @@ CodesScreen.navigationOptions = {
   ),
 };
 
-export default CodesScreen
-
-
-
-
+export default CodesScreen;

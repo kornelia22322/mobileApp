@@ -1,4 +1,4 @@
-import glamorous from "glamorous-native";
+import glamorous from 'glamorous-native';
 
 const DrawerComponent = glamorous.text({
   margin: 16,
@@ -6,4 +6,4 @@ const DrawerComponent = glamorous.text({
 });
 
 
-export default DrawerComponent
+export default DrawerComponent;

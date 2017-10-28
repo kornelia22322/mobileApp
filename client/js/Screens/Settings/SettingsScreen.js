@@ -1,20 +1,20 @@
-import React from "react";
-import {ScrollView, StyleSheet, Text, TouchableOpacity} from "react-native";
-import DrawerIcon from "../../Drawer/DrawerIcon";
-import Toolbar from "../Base/Toolbar";
-import Scene from "../../GlamorousComponents/Scene";
-import T from "../../Translation/Translator";
-import SupportedLanguages from "../../Translation/SupportedLanguages";
-import {IntlText} from "../../Translation/IntlText";
-import DrawerComponent from "../../GlamorousComponents/DrawerComponent";
-import TranslatableComponent from "../../Translation/Translations/TranslatableComponent";
+import React from 'react';
+import { ScrollView, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import DrawerIcon from '../../Drawer/DrawerIcon';
+import Toolbar from '../Base/Toolbar';
+import Scene from '../../GlamorousComponents/Scene';
+import T from '../../Translation/Translator';
+import SupportedLanguages from '../../Translation/SupportedLanguages';
+import { IntlText } from '../../Translation/IntlText';
+import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
+import TranslatableComponent from '../../Translation/Translations/TranslatableComponent';
 
 class SettingsScreen extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       language: T.locale
-    }
+    };
   }
 
   switchLanguage() {
@@ -30,10 +30,11 @@ class SettingsScreen extends React.Component {
       <Scene style={{alignItems: 'center'}}>
         <Toolbar/>
         <ScrollView>
-          <TouchableOpacity style={{margin: 16, flexDirection: 'column'}}
-                            onPress={() => this.switchLanguage("pl")}
+          <TouchableOpacity
+            style={{margin: 16, flexDirection: 'column'}}
+            onPress={() => this.switchLanguage('pl')}
           >
-            <IntlText id={`settings.changeLanguage`}/>
+            <IntlText id={'settings.changeLanguage'}/>
             <IntlText id={`languages.${T.locale}`}/>
 
           </TouchableOpacity>
@@ -44,15 +45,14 @@ class SettingsScreen extends React.Component {
           </TouchableOpacity>
           <TranslatableComponent>
             <Text>
-              {T.getTranslation("drawer.news")}
+              {T.getTranslation('drawer.news')}
             </Text>
           </TranslatableComponent>
         </ScrollView>
       </Scene>
-    )
+    );
   }
 }
-
 
 SettingsScreen.navigationOptions = {
   drawerLabel: <DrawerComponent>
@@ -63,8 +63,4 @@ SettingsScreen.navigationOptions = {
   ),
 };
 
-export default SettingsScreen
-
-const styles = StyleSheet.create({
-  container: {},
-});
+export default SettingsScreen;
