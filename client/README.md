@@ -16,7 +16,7 @@ You should use XCode (iOS - mac only) or Android Studio in order to use Virtual 
 
 Just follow: 
 https://facebook.github.io/react-native/releases/0.23/docs/android-setup.html
-https://facebook.github.io/react-native/docs/getting-started.html (but npm install -g react-native-cli instead of npm install -g create-react-native-app)
+https://facebook.github.io/react-native/docs/getting-started.html (but use `npm install -g react-native-cli` instead of `npm install -g create-react-native-app`)
 ```
 yarn run ios/android
 ```
