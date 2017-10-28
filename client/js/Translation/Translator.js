@@ -1,5 +1,5 @@
-import ClientStorage from '../Utils/ClientStorage';
-import Translations from './Translations';
+import ClientStorage from '../Utils/ClientStorage'
+import Translations from './Translations'
 
 export default class T {
   static refs = [];  

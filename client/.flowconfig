@@ -1,6 +1,8 @@
 [ignore]
 ; We fork some components by platform
 .*/*[.]android.js
+.*/node_modules/react-navigation/.*
+.*/node_modules/react-native-tab-view
 
 ; Ignore "BUCK" generated dirs
 <PROJECT_ROOT>/\.buckd/
@@ -24,6 +26,7 @@ node_modules/react-native/flow/
 
 [options]
 emoji=true
+module.name_mapper='^react-navigation$' -> 'emptyObject'
 
 module.system=haste
 

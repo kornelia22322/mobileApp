@@ -1,22 +1,32 @@
-import React from 'react';
-import { ScrollView, StyleSheet, Text } from 'react-native';
-import DrawerIcon from '../../Drawer/DrawerIcon';
-import Toolbar from '../Base/Toolbar';
-import Scene from '../../GlamorousComponents/Scene';
-import { IntlText } from '../../Translation/IntlText';
-import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
+import React from 'react'
+import { ScrollView, Text } from 'react-native'
+import DrawerIcon from '../../Drawer/DrawerIcon'
+import Toolbar from '../Base/Toolbar'
+import Scene from '../../GlamorousComponents/Scene'
+import { IntlText } from '../../Translation/IntlText'
+import DrawerComponent from '../../GlamorousComponents/DrawerComponent'
 
-const NewsScreen = ({ navigation }) => (
-  <Scene>
-    <Toolbar/>
-    <ScrollView>
-      <Text>
-        Tu będzie NewsScreen
-        <IntlText id='greeting'/>
-      </Text>
-    </ScrollView>
-  </Scene>
-);
+class NewsScreen extends React.Component {
+  render () {
+    return (
+      <Scene>
+        <Toolbar
+          leftButton={{
+            icon: 'menu',
+            onPress: () => this.props.navigation.navigate('DrawerOpen'),
+          }}
+          title="drawer.news"
+        />
+        <ScrollView>
+          <Text>
+            Tu będzie NewsScreen
+            <IntlText id='greeting'/>
+          </Text>
+        </ScrollView>
+      </Scene>
+    )
+  }
+}
 
 NewsScreen.navigationOptions = {
   drawerLabel: <DrawerComponent>
@@ -27,4 +37,9 @@ NewsScreen.navigationOptions = {
   ),
 };
 
-export default NewsScreen;
+export default NewsScreen
+
+
+
+
+

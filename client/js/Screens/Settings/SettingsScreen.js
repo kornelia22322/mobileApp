@@ -1,13 +1,13 @@
-import React from 'react';
-import { ScrollView, StyleSheet, Text, TouchableOpacity } from 'react-native';
-import DrawerIcon from '../../Drawer/DrawerIcon';
-import Toolbar from '../Base/Toolbar';
-import Scene from '../../GlamorousComponents/Scene';
-import T from '../../Translation/Translator';
-import SupportedLanguages from '../../Translation/SupportedLanguages';
-import { IntlText } from '../../Translation/IntlText';
-import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
-import TranslatableComponent from '../../Translation/Translations/TranslatableComponent';
+import React from 'react'
+import { ScrollView, Text, TouchableOpacity } from 'react-native'
+import DrawerIcon from '../../Drawer/DrawerIcon'
+import Toolbar from '../Base/Toolbar'
+import Scene from '../../GlamorousComponents/Scene'
+import T from '../../Translation/Translator'
+import SupportedLanguages from '../../Translation/SupportedLanguages'
+import { IntlText } from '../../Translation/IntlText'
+import DrawerComponent from '../../GlamorousComponents/DrawerComponent'
+import TranslatableComponent from '../../Translation/TranslatableComponent'
 
 class SettingsScreen extends React.Component {
   constructor(props) {
