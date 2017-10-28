@@ -3,7 +3,7 @@ import { ScrollView, Text, View } from 'react-native';
 import { DrawerItems } from 'react-navigation';
 
 const DrawerContent = (props) => (
-  <View style={{flex: 1}}>
+  <View style={{ flex: 1 }}>
     <ScrollView>
       <Text>
         Tu będzie logo SFI

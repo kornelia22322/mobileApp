@@ -14,7 +14,7 @@ const DrawerNavigation = DrawerNavigator(
   {
     News: {
       path: '/News',
-      screen: NewsScreen,
+      screen: NewsScreen
     },
     Agenda: {
       path: '/Agenda',
@@ -26,7 +26,7 @@ const DrawerNavigation = DrawerNavigator(
     },
     Contact: {
       path: '/Contact',
-      screen: ContactScreen,
+      screen: ContactScreen
     },
     Settings: {
       path: '/Settings',
@@ -36,7 +36,7 @@ const DrawerNavigation = DrawerNavigator(
   {
     initialRouteName: 'News',
     contentOptions: {
-      activeTintColor: Config.MainColor,
+      activeTintColor: Config.MainColor
     },
     contentComponent: DrawerContent
   }
@@ -45,8 +45,8 @@ const DrawerNavigation = DrawerNavigator(
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {loaded: false};
-    T.init().then(() => this.setState({loaded: true}))
+    this.state = { loaded: false };
+    T.init().then(() => this.setState({ loaded: true }))
   }
 
   render() {

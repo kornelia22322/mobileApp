@@ -6,7 +6,7 @@ const DrawerIcon = (props) => (
   <MaterialIcons
     name={props.name}
     size={24}
-    style={{color: Config.MainColor}}
+    style={{ color: Config.MainColor }}
   />
 );
 

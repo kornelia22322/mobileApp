@@ -1,4 +1,4 @@
-import {Platform} from 'react-native';
+import { Platform } from 'react-native';
 import glamorous from 'glamorous-native';
 
 const Scene = glamorous.view({

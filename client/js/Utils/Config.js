@@ -1,6 +1,6 @@
-export default Config = {
-  MainColor: '#6335e7', //Color of accents. Core of app design
-  SupportiveColor: '#acacac', //Default color for components
+const Config = {
+  MainColor: '#6335e7', // Color of accents. Core of app design.
+  SupportiveColor: '#acacac', // Default color for components.
   TextColoStrong: '#151515',
   TextColorSupportive: '#404040',
   TextColorLight: '#DDDDDD',
@@ -9,5 +9,7 @@ export default Config = {
 
   smallFontSize: 8,
   MediumFontSize: 14,
-  HeaderFontSize: 24,
+  HeaderFontSize: 24
 };
+
+export default Config;

@@ -1,11 +1,11 @@
-import {AsyncStorage} from "react-native";
+import { AsyncStorage } from 'react-native';
 
 export default class ClientStorage {
   static setLocale(locale) {
-    AsyncStorage.setItem("locale", locale);
+    AsyncStorage.setItem('locale', locale);
   }
 
   static async getLocale() {
-    return await AsyncStorage.getItem("locale");
+    return await AsyncStorage.getItem('locale');
   }
 }

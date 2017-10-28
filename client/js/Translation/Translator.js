@@ -1,9 +1,9 @@
-import ClientStorage from "../Utils/ClientStorage";
-import Translations from "./Translations";
+import ClientStorage from '../Utils/ClientStorage';
+import Translations from './Translations';
 
 export default class T {
   static refs = [];  
-  static locale = "en";
+  static locale = 'en';
   static _timeoutId;
 
   static async init() {
@@ -12,12 +12,12 @@ export default class T {
 
     if (locale)
       this.locale = locale;
-    else 
+    else
       this.locale = 'en';
   }
 
   static getTranslation(id) {
-    const names = id.split(".");
+    const names = id.split('.');
     let obj = Translations[this.locale];
     names.forEach(name => {
       if (obj[name] === null)
@@ -26,7 +26,6 @@ export default class T {
         obj = obj[name];
     });
     return obj;
-
   }
 
   static switchLanguage(newLanguage) {
@@ -55,11 +54,10 @@ export default class T {
   static _repairRefArray() {
     const newRefs = [];
     this.refs.forEach((ref) => {
-        if (ref) {
-          newRefs.push(ref);
-        }
+      if (ref) {
+        newRefs.push(ref);
       }
-    );
+    });
     this.refs = newRefs;
   }
 }
