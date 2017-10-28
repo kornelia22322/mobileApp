@@ -1,5 +1,5 @@
 import React from 'react';
-import {DrawerNavigator} from 'react-navigation';
+import { DrawerNavigator } from 'react-navigation';
 import NewsScreen from './Screens/News/NewsScreen';
 import DrawerContent from './Drawer/DrawerContent';
 import ContactScreen from './Screens/Contact/ContactScreen';

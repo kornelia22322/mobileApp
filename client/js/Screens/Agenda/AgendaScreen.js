@@ -1,5 +1,5 @@
-import React from "react";
-import {ScrollView, Text} from "react-native";
+import React from 'react';
+import { ScrollView, Text } from 'react-native';
 import DrawerIcon from '../../Drawer/DrawerIcon';
 import Scene from '../../GlamorousComponents/Scene';
 import Toolbar from '../Base/Toolbar';
