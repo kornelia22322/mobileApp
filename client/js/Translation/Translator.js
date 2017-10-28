@@ -9,7 +9,11 @@ export default class T {
   static async init() {
     const locale = await ClientStorage.getLocale();
     console.log(locale);
-    this.locale = locale;
+    
+    if (locale)
+      this.locale = locale;
+    else 
+      this.locale = 'en';
   }
 
   static getTranslation(id) {
