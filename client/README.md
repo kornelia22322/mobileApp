@@ -1,8 +1,9 @@
 ## install
 
-make sure you have installed *yarn* 
+make sure you have installed *yarn* and *npm*
 ```
-yarn install
+npm install -g react-native-cli
+yarn
 ```
 
 ## run
