@@ -1,6 +1,3 @@
-/**
- * Created by micosa on 20.10.17.
- */
 import React from 'react'
 import { Platform, View } from 'react-native'
 import DesignUtils from '../../Utils/DesignUtils'
@@ -10,14 +7,14 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { IntlText } from '../../Translation/IntlText'
 
 export default class Toolbar extends React.Component {
-  render () {
+  render() {
     return (
       <View style={[{
         width: '100%',
         height: Config.ToolbarHeight,
         backgroundColor: Config.MainColor
       },
-        DesignUtils.getShadowStyle(2)
+      DesignUtils.getShadowStyle(2)
       ]}>
         <View style={{
           flexDirection: 'row',
@@ -34,21 +31,26 @@ export default class Toolbar extends React.Component {
     )
   }
 
-  _renderTitle (title) {
+  _renderTitle(title) {
     if (!title)
-      return
+      return;
+
     return (
       <View style={{
-        alignItems: (Platform.OS === 'ios') ? 'center' : 'flex-start',
+        position: 'absolute',
         left: (Platform.OS === 'ios') ? 0 : 72,
-        position: 'absolute'
+        right: 0,
+        top: 0,
+        bottom: 0,
+        justifyContent: 'center',
+        alignItems: (Platform.OS === 'ios') ? 'center' : 'flex-start'
       }}>
         <IntlText style={{
           fontSize: Config.fontToolbar,
           color: Config.toolbarTitleColor,
-          fontWeight: (Platform.OS === 'ios') ? '500' : 'normal'
+          fontWeight: (Platform.OS === 'ios') ? '500' : '400'
         }}
-                  id={title}
+        id={title}
         />
       </View>
     )
