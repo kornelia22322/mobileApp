@@ -11,7 +11,7 @@ const ContactScreen = ({ navigation }) => (
     <Toolbar/>
     <ScrollView>
       <Text>
-        Tu będzie ContactScreen :)
+        Tu będzie ContactScreen
       </Text>
     </ScrollView>
   </Scene>
