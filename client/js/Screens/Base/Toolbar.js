@@ -35,6 +35,8 @@ export default class Toolbar extends React.Component {
   }
 
   _renderTitle (title) {
+    if (!title)
+      return
     return (
       <View style={{
         alignItems: (Platform.OS === 'ios') ? 'center' : 'flex-start',
