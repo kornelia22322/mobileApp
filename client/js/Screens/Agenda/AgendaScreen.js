@@ -8,11 +8,12 @@ import { IntlText } from '../../Translation/IntlText';
 
 const AgendaScreen = ({ navigation }) => (
   <Scene>
-    <Toolbar title="drawer.agenda"
+    <Toolbar
+      title="drawer.agenda"
       leftButton={{
-                 icon:'menu',
-                 onPress: () => navigation.navigate('DrawerOpen'),
-             }}
+        icon: 'menu',
+        onPress: () => navigation.navigate('DrawerOpen')
+      }}
     />
     <ScrollView>
       <Text>
@@ -32,4 +33,3 @@ AgendaScreen.navigationOptions = {
 };
 
 export default AgendaScreen;
-
