@@ -1,14 +1,15 @@
-import React from 'react'
-import { ScrollView, Text } from 'react-native'
-import DrawerIcon from '../../Drawer/DrawerIcon'
-import Toolbar from '../Base/Toolbar'
-import Scene from '../../GlamorousComponents/Scene'
-import { IntlText } from '../../Translation/IntlText'
-import DrawerComponent from '../../GlamorousComponents/DrawerComponent'
+import React from 'react';
+import { ScrollView, Text } from 'react-native';
+import DrawerIcon from '../../Drawer/DrawerIcon';
+import Toolbar from '../Base/Toolbar';
+import Scene from '../../GlamorousComponents/Scene';
+import Config from '../../Utils/Config';
+import { IntlText } from '../../Translation/IntlText';
+import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
 
 class NewsScreen extends React.Component {
   componentDidMount () {
-    fetch('http://10.0.2.2:3000/messages')
+    fetch(`${Config.url}/messages`)
       .then((response) => response.json())
       .then((responseJson) => {
         console.log(responseJson)

@@ -21,7 +21,7 @@ class SettingsScreen extends React.Component {
     let index = SupportedLanguages.indexOf(this.state.language);
     index = (index + 1) % SupportedLanguages.length;
     const newLanguage = SupportedLanguages[index];
-    this.setState({language: newLanguage});
+    this.setState({ language: newLanguage });
     T.switchLanguage(newLanguage);
   }
 
