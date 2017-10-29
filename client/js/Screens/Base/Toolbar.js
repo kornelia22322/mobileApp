@@ -86,8 +86,3 @@ export default class Toolbar extends React.Component {
     )
   };
 }
-
-
-
-
-
