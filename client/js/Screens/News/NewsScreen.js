@@ -4,10 +4,17 @@ import DrawerIcon from '../../Drawer/DrawerIcon';
 import Toolbar from '../Base/Toolbar';
 import Scene from '../../GlamorousComponents/Scene';
 import Config from '../../Utils/Config';
+import T from '../../Translation/Translator'
 import { IntlText } from '../../Translation/IntlText';
 import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
 
 class NewsScreen extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            language: T.locale
+        };
+    }
   componentDidMount () {
     fetch(`${Config.url}/messages`)
       .then((response) => response.json())
@@ -22,13 +29,12 @@ class NewsScreen extends React.Component {
   render () {
     return (
       <Scene>
-        <Toolbar
-          leftButton={{
-            icon: 'menu',
-            onPress: () => this.props.navigation.navigate('DrawerOpen'),
-          }}
-          title="drawer.news"
-        />
+          <Toolbar title="drawer.news"
+                   leftButton={{
+                       icon:'menu',
+                       onPress: () => this.props.navigation.navigate('DrawerOpen'),
+                   }}
+          />
         <ScrollView>
           <Text>
             Tu będzie NewsScreen
