@@ -43,7 +43,7 @@ class SettingsScreen extends React.Component {
             <IntlText id={`languages.${T.locale}`}/>
 
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('News')}>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('News')}>
             <Text>
               News
             </Text>
