@@ -1,3 +1,5 @@
+
+server/log/development.log
 # Ignore bundler config.
 /.bundle
 

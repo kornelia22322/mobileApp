@@ -250,3 +250,15 @@ Processing by MessagesController#index as */*
 Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 02:07:37 +0100
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (3.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+Completed 200 OK in 33ms (Views: 21.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 02:11:09 +0100
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.8ms)
+
+
