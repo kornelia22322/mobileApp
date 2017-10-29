@@ -7,6 +7,17 @@ import { IntlText } from '../../Translation/IntlText'
 import DrawerComponent from '../../GlamorousComponents/DrawerComponent'
 
 class NewsScreen extends React.Component {
+  componentDidMount () {
+    fetch('http://10.0.2.2:3000/messages')
+      .then((response) => response.json())
+      .then((responseJson) => {
+        console.log(responseJson)
+      })
+      .catch((error) => {
+        console.error(error)
+      })
+  }
+
   render () {
     return (
       <Scene>
