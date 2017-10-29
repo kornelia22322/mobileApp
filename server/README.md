@@ -2,7 +2,31 @@
 The server uses **rails 5.1.4** and **Ruby 2.4.1**.
 
 ## Installation
-Before you dive into dependency management, first download and install `rvm`, then `rvm use 2.4.1`. After successful attempt, continue with:
+Before you dive into dependency management, first download and install `rvm`, then `rvm use 2.4.1`.
+
+## PostgreSQL
+You also need to download PostgreSQL.
+```bash
+sudo apt-get install postgresql postgresql-contrib
+sudo apt-get install libpq-dev
+```
+
+And change its config. Open `/etc/postgresql/9.6/pg_hba.conf` in any editor with root priviledges and change in the following line:
+```bash
+local    all        postgres           peer
+```
+
+To:
+```bash
+local    all        postgres           md5
+```
+
+Restart PostgreSQL:
+```bash
+sudo systemctl restart postgresql
+```
+
+After successful attempt, continue with:
 ```bash
 cd server
 gem install bundler
