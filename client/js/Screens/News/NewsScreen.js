@@ -23,11 +23,11 @@ class NewsScreen extends React.Component {
     return (
       <Scene>
         <Toolbar
+          title="drawer.news"
           leftButton={{
             icon: 'menu',
             onPress: () => this.props.navigation.navigate('DrawerOpen'),
           }}
-          title="drawer.news"
         />
         <ScrollView>
           <Text>
@@ -49,9 +49,4 @@ NewsScreen.navigationOptions = {
   ),
 };
 
-export default NewsScreen
-
-
-
-
-
+export default NewsScreen;

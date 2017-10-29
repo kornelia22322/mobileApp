@@ -8,7 +8,13 @@ import { IntlText } from '../../Translation/IntlText';
 
 const ContactScreen = ({ navigation }) => (
   <Scene>
-    <Toolbar/>
+    <Toolbar
+      title="drawer.contact"
+      leftButton={{
+        icon: 'menu',
+        onPress: () => navigation.navigate('DrawerOpen')
+      }}
+    />
     <ScrollView>
       <Text>
         Tu będzie ContactScreen

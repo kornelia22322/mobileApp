@@ -27,8 +27,14 @@ class SettingsScreen extends React.Component {
 
   render() {
     return (
-      <Scene style={{alignItems: 'center'}}>
-        <Toolbar/>
+      <Scene style={{ alignItems: 'center' }}>
+        <Toolbar
+          title="drawer.settings"
+          leftButton={{
+            icon: 'menu',
+            onPress: () => this.props.navigation.navigate('DrawerOpen')
+          }}
+        />
         <ScrollView>
           <TouchableOpacity
             style={{margin: 16, flexDirection: 'column'}}
