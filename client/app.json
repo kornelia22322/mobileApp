@@ -1,4 +1,7 @@
 {
   "name": "client",
-  "displayName": "client"
+  "displayName": "client",
+  "expo": {
+  "sdkVersion": "18.0.0"
+}
 }
