@@ -8,7 +8,7 @@ yarn
 
 ## run
 ```
-yarn start
+react-native start
 ```
 to trigger packager. It's essential to run app in dev environment. Packager reloads your JS code and compiles it to native (iOS/Android) code.
 
@@ -18,7 +18,7 @@ Just follow:
 https://facebook.github.io/react-native/releases/0.23/docs/android-setup.html
 https://facebook.github.io/react-native/docs/getting-started.html (but use `npm install -g react-native-cli` instead of `npm install -g create-react-native-app`)
 ```
-yarn run ios/android
+react-native run-android
 ```
 This gonna work it most cases but sometimes it does not ;)
 

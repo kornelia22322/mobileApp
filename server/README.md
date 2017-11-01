@@ -11,14 +11,14 @@ sudo apt-get install postgresql postgresql-contrib
 sudo apt-get install libpq-dev
 ```
 
-And change its config. Open `/etc/postgresql/9.6/pg_hba.conf` in any editor with root priviledges and change in the following line:
+And change its config. Open `/etc/postgresql/9.6/pg_hba.conf` in any editor with root priviledges and change the following line:
 ```bash
-local    all        postgres           peer
+local   all        all          peer
 ```
 
 To:
 ```bash
-local    all        postgres           md5
+local   all        all          md5
 ```
 
 Restart PostgreSQL:
