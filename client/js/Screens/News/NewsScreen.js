@@ -1,11 +1,13 @@
-import React from 'react';
-import { ScrollView, Text } from 'react-native';
-import DrawerIcon from '../../Drawer/DrawerIcon';
-import Toolbar from '../Base/Toolbar';
-import Scene from '../../GlamorousComponents/Scene';
-import Config from '../../Utils/Config';
-import { IntlText } from '../../Translation/IntlText';
-import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
+import React from 'react'
+import { FlatList, ScrollView } from 'react-native'
+import DrawerIcon from '../../Drawer/DrawerIcon'
+import Toolbar from '../Base/Toolbar'
+import Scene from '../../GlamorousComponents/Scene'
+import Config from '../../Utils/Config'
+import { IntlText } from '../../Translation/IntlText'
+import DrawerComponent from '../../GlamorousComponents/DrawerComponent'
+import T from '../../Translation/Translator'
+import NewsItem from './NewsItem'
 
 class NewsScreen extends React.Component {
   componentDidMount () {
@@ -20,6 +22,7 @@ class NewsScreen extends React.Component {
   }
 
   render () {
+    console.log(Config.server.getNews()[T.locale])
     return (
       <Scene>
         <Toolbar
@@ -30,10 +33,12 @@ class NewsScreen extends React.Component {
           }}
         />
         <ScrollView>
-          <Text>
-            Tu będzie NewsScreen
-            <IntlText id='greeting'/>
-          </Text>
+          <FlatList
+            style={{margin: Config.spacingNormal}}
+            data={Config.server.getNews()}
+            keyExtractor={(item, index) => `news ${index}`}
+            renderItem={({item}) => <NewsItem {...item}/>}
+          />
         </ScrollView>
       </Scene>
     )
