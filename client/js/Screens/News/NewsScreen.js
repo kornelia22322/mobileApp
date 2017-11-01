@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlatList, ScrollView } from 'react-native'
+import { FlatList } from 'react-native'
 import DrawerIcon from '../../Drawer/DrawerIcon'
 import Toolbar from '../Base/Toolbar'
 import Scene from '../../GlamorousComponents/Scene'
@@ -10,17 +10,16 @@ import T from '../../Translation/Translator'
 import NewsItem from './NewsItem'
 
 class NewsScreen extends React.Component {
-  componentDidMount () {
-    fetch(`${Config.url}/messages`)
-      .then((response) => response.json())
-      .then((responseJson) => {
-        console.log(responseJson)
-      })
-      .catch((error) => {
-        console.error(error)
-      })
+  constructor (props) {
+    super(props)
+    this._onCartItemExpand = this._onCartItemExpand.bind(this)
   }
 
+  listRef: FlatList
+
+  _onCartItemExpand () {
+    this.listRef.scrollToEnd()
+  }
   render () {
     console.log(Config.server.getNews()[T.locale])
     return (
@@ -32,14 +31,14 @@ class NewsScreen extends React.Component {
             onPress: () => this.props.navigation.navigate('DrawerOpen'),
           }}
         />
-        <ScrollView>
           <FlatList
-            style={{margin: Config.spacingNormal}}
+            index={2}
+            ref={(ref) => this.listRef = ref}
+            style={{padding: Config.spacingNormal}}
             data={Config.server.getNews()}
             keyExtractor={(item, index) => `news ${index}`}
             renderItem={({item}) => <NewsItem {...item}/>}
           />
-        </ScrollView>
       </Scene>
     )
   }
