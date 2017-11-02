@@ -1,10 +1,10 @@
-import React from 'react'
-import { ScrollView, Text } from 'react-native'
-import DrawerIcon from '../../Drawer/DrawerIcon'
-import Scene from '../../GlamorousComponents/Scene'
-import Toolbar from '../Base/Toolbar'
-import DrawerComponent from '../../GlamorousComponents/DrawerComponent'
-import { IntlText } from '../../Translation/IntlText'
+import React from 'react';
+import { ScrollView, Text } from 'react-native';
+import DrawerIcon from '../../Drawer/DrawerIcon';
+import Scene from '../../GlamorousComponents/Scene';
+import Toolbar from '../Base/Toolbar';
+import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
+import { IntlText } from '../../Translation/IntlText';
 
 const AgendaScreen = ({ navigation }) => (
   <Scene>
@@ -27,9 +27,8 @@ AgendaScreen.navigationOptions = {
   drawerLabel: <DrawerComponent>
     <IntlText id="drawer.agenda"/>
   </DrawerComponent>,
-  drawerIcon: () => (
+  drawerIcon:
     <DrawerIcon name="school"/>
-  )
 };
 
 export default AgendaScreen;

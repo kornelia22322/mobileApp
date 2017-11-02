@@ -1,7 +1,7 @@
-import glamorous from 'glamorous-native'
-import MobileUtil from '../Utils/DesignUtils'
-import Config from '../Utils/Config'
-import { MKButton } from 'react-native-material-kit'
+import glamorous from 'glamorous-native';
+import MobileUtil from '../Utils/DesignUtils';
+import Config from '../Utils/Config';
+import { MKButton } from 'react-native-material-kit';
 
 const ButtonCard = glamorous(MKButton)({
   ...MobileUtil.getShadowStyle(2),
@@ -12,4 +12,4 @@ const ButtonCard = glamorous(MKButton)({
   padding: Config.spacingLarge
 });
 
-export default ButtonCard
+export default ButtonCard;

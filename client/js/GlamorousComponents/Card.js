@@ -1,6 +1,6 @@
-import glamorous from 'glamorous-native'
-import MobileUtil from '../Utils/DesignUtils'
-import Config from '../Utils/Config'
+import glamorous from 'glamorous-native';
+import MobileUtil from '../Utils/DesignUtils';
+import Config from '../Utils/Config';
 
 const Card = glamorous.view({
   ...MobileUtil.getShadowStyle(2),
