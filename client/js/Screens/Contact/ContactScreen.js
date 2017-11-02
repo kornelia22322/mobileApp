@@ -1,20 +1,9 @@
 import React from 'react';
 import { ScrollView, Text } from 'react-native';
-import DrawerIcon from '../../Drawer/DrawerIcon';
-import Toolbar from '../Base/Toolbar';
 import Scene from '../../GlamorousComponents/Scene';
-import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
 import { IntlText } from '../../Translation/IntlText';
-
 const ContactScreen = ({ navigation }) => (
   <Scene>
-    <Toolbar
-      title="drawer.contact"
-      leftButton={{
-        icon: 'menu',
-        onPress: () => navigation.navigate('DrawerOpen')
-      }}
-    />
     <ScrollView>
       <Text>
         Tu będzie ContactScreen
@@ -22,13 +11,10 @@ const ContactScreen = ({ navigation }) => (
     </ScrollView>
   </Scene>
 );
+
 ContactScreen.navigationOptions = {
-  drawerLabel: <DrawerComponent>
-    <IntlText id="drawer.contact"/>
-  </DrawerComponent>,
-  drawerIcon: () => (
-    <DrawerIcon name="mail"/>
-  ),
+  title:<IntlText id="drawer.news"/>,
+  icon:require('../../Assets/Icons/app_logo.png')
 };
 
 export default ContactScreen;

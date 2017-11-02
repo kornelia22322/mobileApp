@@ -1,20 +1,11 @@
 import React from 'react';
 import { ScrollView, Text } from 'react-native';
-import DrawerIcon from '../../Drawer/DrawerIcon';
-import Toolbar from '../Base/Toolbar';
 import Scene from '../../GlamorousComponents/Scene';
-import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
 import { IntlText } from '../../Translation/IntlText';
-
+import TabBarIcon from '../../GlamorousComponents/TabBarIcon';
+import TabBarLabel from '../../GlamorousComponents/TabBarLabel';
 const CodesScreen = ({ navigation }) => (
   <Scene>
-    <Toolbar
-      title="drawer.codes"
-      leftButton={{
-        icon: 'menu',
-        onPress: () => navigation.navigate('DrawerOpen')
-      }}
-    />
     <ScrollView>
       <Text>
         Tu będzie CodesScreen
@@ -24,12 +15,8 @@ const CodesScreen = ({ navigation }) => (
 );
 
 CodesScreen.navigationOptions = {
-  drawerLabel: <DrawerComponent>
-    <IntlText id="drawer.codes"/>
-  </DrawerComponent>,
-  drawerIcon: () => (
-    <DrawerIcon name="style"/>
-  ),
+  tabBarLabel: ({ focused, tintColor }) => (<TabBarLabel focused={focused} tintColor={tintColor}><Text><IntlText id="drawer.codes"/></Text></TabBarLabel>),
+  tabBarIcon: ({ tintColor }) => (<TabBarIcon source={require('./../../Assets/Icons/ic_center_focus_strong_black_24dp.png')} tintColor={tintColor}/>)
 };
 
 export default CodesScreen;

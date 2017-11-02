@@ -1,13 +1,10 @@
-import React from 'react'
-import { ScrollView, Text, TouchableOpacity } from 'react-native'
-import DrawerIcon from '../../Drawer/DrawerIcon'
-import Toolbar from '../Base/Toolbar'
-import Scene from '../../GlamorousComponents/Scene'
-import T from '../../Translation/Translator'
-import SupportedLanguages from '../../Translation/SupportedLanguages'
-import { IntlText } from '../../Translation/IntlText'
-import DrawerComponent from '../../GlamorousComponents/DrawerComponent'
-import TranslatableComponent from '../../Translation/TranslatableComponent'
+import React from 'react';
+import { ScrollView, Text, TouchableOpacity } from 'react-native';
+import Scene from '../../GlamorousComponents/Scene';
+import T from '../../Translation/Translator';
+import SupportedLanguages from '../../Translation/SupportedLanguages';
+import { IntlText } from '../../Translation/IntlText';
+import TranslatableComponent from '../../Translation/TranslatableComponent';
 
 class SettingsScreen extends React.Component {
   constructor(props) {
@@ -28,16 +25,9 @@ class SettingsScreen extends React.Component {
   render() {
     return (
       <Scene style={{ alignItems: 'center' }}>
-        <Toolbar
-          title="drawer.settings"
-          leftButton={{
-            icon: 'menu',
-            onPress: () => this.props.navigation.navigate('DrawerOpen')
-          }}
-        />
         <ScrollView>
           <TouchableOpacity
-            style={{margin: 16, flexDirection: 'column'}}
+            style={{ margin: 16, flexDirection: 'column' }}
             onPress={() => this.switchLanguage('pl')}
           >
             <IntlText id={'settings.changeLanguage'}/>
@@ -61,12 +51,8 @@ class SettingsScreen extends React.Component {
 }
 
 SettingsScreen.navigationOptions = {
-  drawerLabel: <DrawerComponent>
-    <IntlText id="drawer.settings"/>
-  </DrawerComponent>,
-  drawerIcon: () => (
-    <DrawerIcon name="settings-applications"/>
-  ),
+  title:<IntlText id="drawer.news"/>,
+  icon:require('../../Assets/Icons/app_logo.png')
 };
 
 export default SettingsScreen;

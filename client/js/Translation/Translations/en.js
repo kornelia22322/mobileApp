@@ -4,12 +4,16 @@ export default {
     news: 'News',
     codes: 'Codes',
     settings: 'Settings',
-    contact: 'Contact'
+    contact: 'Contact',
+    lecturers:'Lecturers',
+    about:'About'
   },
-  en: 'English',
   languages: {
     pl: 'Polish',
     en: 'English'
+  },
+  toolbar: {
+    sfi:'SFI IT Festival' // TODO: CORRECT TRANSLATIONS
   },
   settings: {
     changeLanguage: 'Change language:'

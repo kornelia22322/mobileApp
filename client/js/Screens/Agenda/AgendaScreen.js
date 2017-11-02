@@ -1,20 +1,12 @@
 import React from 'react';
 import { ScrollView, Text } from 'react-native';
-import DrawerIcon from '../../Drawer/DrawerIcon';
 import Scene from '../../GlamorousComponents/Scene';
-import Toolbar from '../Base/Toolbar';
-import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
 import { IntlText } from '../../Translation/IntlText';
+import TabBarIcon from '../../GlamorousComponents/TabBarIcon';
+import TabBarLabel from '../../GlamorousComponents/TabBarLabel';
 
 const AgendaScreen = ({ navigation }) => (
   <Scene>
-    <Toolbar
-      title="drawer.agenda"
-      leftButton={{
-        icon: 'menu',
-        onPress: () => navigation.navigate('DrawerOpen')
-      }}
-    />
     <ScrollView>
       <Text>
         Tu będzie AgendaScreen
@@ -24,12 +16,8 @@ const AgendaScreen = ({ navigation }) => (
 );
 
 AgendaScreen.navigationOptions = {
-  drawerLabel: <DrawerComponent>
-    <IntlText id="drawer.agenda"/>
-  </DrawerComponent>,
-  drawerIcon: () => (
-    <DrawerIcon name="school"/>
-  ),
+  tabBarLabel: ({ focused, tintColor }) => (<TabBarLabel focused={focused} tintColor={tintColor}><Text><IntlText id="drawer.agenda"/></Text></TabBarLabel>),
+  tabBarIcon: ({ tintColor }) => (<TabBarIcon source={require('./../../Assets/Icons/ic_event_black_24dp.png')} tintColor={tintColor}/>)
 };
 
 export default AgendaScreen;
