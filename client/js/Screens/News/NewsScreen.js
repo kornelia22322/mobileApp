@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlatList } from 'react-native'
+import { FlatList, View } from 'react-native'
 import DrawerIcon from '../../Drawer/DrawerIcon'
 import Toolbar from '../Base/Toolbar'
 import Scene from '../../GlamorousComponents/Scene'
@@ -10,15 +10,11 @@ import T from '../../Translation/Translator'
 import NewsItem from './NewsItem'
 
 class NewsScreen extends React.Component {
-  constructor (props) {
-    super(props)
-    this._onCartItemExpand = this._onCartItemExpand.bind(this)
-  }
-
+  _data = Config.server.getNews()
   listRef: FlatList
 
-  _onCartItemExpand () {
-    this.listRef.scrollToEnd()
+  _onCartItemExpand (index: number) {
+    this.listRef.scrollToIndex({index})
   }
   render () {
     console.log(Config.server.getNews()[T.locale])
@@ -32,12 +28,12 @@ class NewsScreen extends React.Component {
           }}
         />
           <FlatList
-            index={2}
             ref={(ref) => this.listRef = ref}
+            ListFooterComponent={() => <View style={{height: Config.toolbarHeight + 2 * Config.spacingSmall}}/>}
             style={{padding: Config.spacingNormal}}
-            data={Config.server.getNews()}
+            data={this._data}
             keyExtractor={(item, index) => `news ${index}`}
-            renderItem={({item}) => <NewsItem {...item}/>}
+            renderItem={({item, index}) => <NewsItem {...item} onExpand={() => this._onCartItemExpand(index)}/>}
           />
       </Scene>
     )
