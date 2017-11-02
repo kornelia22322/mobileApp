@@ -10,6 +10,6 @@ const ButtonCard = glamorous(MKButton)({
   backgroundColor: '#FFFFFF',
   borderRadius: 2,
   padding: Config.spacingLarge
-})
+});
 
 export default ButtonCard

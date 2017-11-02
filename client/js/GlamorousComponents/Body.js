@@ -4,6 +4,6 @@ const Body = glamorous.text({
   fontSize: Config.mediumFontSize,
   color: Config.textColorSupportive,
   fontWeight: '100'
-})
+});
 
 export default Body

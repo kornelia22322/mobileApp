@@ -64,9 +64,8 @@ SettingsScreen.navigationOptions = {
   drawerLabel: <DrawerComponent>
     <IntlText id="drawer.settings"/>
   </DrawerComponent>,
-  drawerIcon: () => (
+  drawerIcon:
     <DrawerIcon name="settings-applications"/>
-  ),
 };
 
 export default SettingsScreen;
