@@ -22,11 +22,11 @@ class NewsItem extends React.Component {
   async changeExpansion () {
     LayoutAnimation.configureNext((LayoutAnimation.Presets.easeInEaseOut))
     if (this.state.expanded) {
-      this._timeoutId = setTimeout(() => this.refs.body.setNativeProps({numberOfLines: 5}), 200) //because of RN bug
+      this._timeoutId = setTimeout(() => this.refs.body.setNativeProps({numberOfLines: 5}), 200) //because of RN bug on Android
       this.setState({height: this._heightToBeBack})
     } else {
       this.setState({height: null})
-      setTimeout(() => this.props.onExpand(), 300)
+      setTimeout(() => this.props.onExpand(), 400)
 
       if (this._heightToBeBack === -1)
         await this.refs.viewRef.measure((ox, oy, width, height) => this._heightToBeBack = height - 2 * Config.spacingSmall)
@@ -36,9 +36,11 @@ class NewsItem extends React.Component {
     this.setState({expanded: !this.state.expanded})
   }
   render () {
+    //onLayout={()=>{}} -- because of another RN bug on Android
     return (
       <View
         ref="viewRef"
+        onLayout={() => {}}
         style={{height: this.state.height}}
       >
         <ButtonCard
