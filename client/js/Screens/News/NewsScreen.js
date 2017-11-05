@@ -7,7 +7,7 @@ import Scene from '../../GlamorousComponents/Scene';
 import Config from '../../Utils/Config';
 import { IntlText } from '../../Translation/IntlText';
 import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
-import NewsItem from './NewsItem';
+import NewsItem from './NewsItemSimple';
 
 class NewsScreen extends React.Component {
   _data = Config.server.getNews();

@@ -58,7 +58,7 @@ class NewsItem extends React.Component {
           <Body
             ref="body"
             numberOfLines={5}>
-          {this.props.body[T.locale]}
+            {this.props.body[T.locale]}
           </Body>
         </ButtonCard>
       </View>
