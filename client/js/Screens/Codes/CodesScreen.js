@@ -8,7 +8,13 @@ import { IntlText } from '../../Translation/IntlText';
 
 const CodesScreen = ({ navigation }) => (
   <Scene>
-    <Toolbar/>
+    <Toolbar
+      title="drawer.codes"
+      leftButton={{
+        icon: 'menu',
+        onPress: () => navigation.navigate('DrawerOpen')
+      }}
+    />
     <ScrollView>
       <Text>
         Tu będzie CodesScreen
@@ -21,9 +27,8 @@ CodesScreen.navigationOptions = {
   drawerLabel: <DrawerComponent>
     <IntlText id="drawer.codes"/>
   </DrawerComponent>,
-  drawerIcon: () => (
+  drawerIcon:
     <DrawerIcon name="style"/>
-  ),
 };
 
 export default CodesScreen;

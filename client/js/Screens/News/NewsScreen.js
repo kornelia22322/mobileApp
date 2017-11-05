@@ -1,42 +1,42 @@
+// @flow
 import React from 'react';
-import { ScrollView, Text } from 'react-native';
+import { FlatList, View } from 'react-native';
 import DrawerIcon from '../../Drawer/DrawerIcon';
 import Toolbar from '../Base/Toolbar';
 import Scene from '../../GlamorousComponents/Scene';
 import Config from '../../Utils/Config';
 import { IntlText } from '../../Translation/IntlText';
 import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
+import NewsItem from './NewsItemSimple';
 
 class NewsScreen extends React.Component {
-  componentDidMount () {
-    fetch(`${Config.url}/messages`)
-      .then((response) => response.json())
-      .then((responseJson) => {
-        console.log(responseJson)
-      })
-      .catch((error) => {
-        console.error(error)
-      })
+  _data = Config.server.getNews();
+  listRef: any;
+
+  _onCartItemExpand(index: number) {
+    this.listRef.scrollToIndex({ index });
   }
 
-  render () {
+  render() {
     return (
       <Scene>
         <Toolbar
+          title="drawer.news"
           leftButton={{
             icon: 'menu',
-            onPress: () => this.props.navigation.navigate('DrawerOpen'),
+            onPress: () => this.props.navigation.navigate('DrawerOpen')
           }}
-          title="drawer.news"
         />
-        <ScrollView>
-          <Text>
-            Tu będzie NewsScreen
-            <IntlText id='greeting'/>
-          </Text>
-        </ScrollView>
+        <FlatList
+          ref={(ref) => this.listRef = ref}
+          ListFooterComponent={() => <View style={{ height: Config.toolbarHeight + 2 * Config.spacingSmall }}/>}
+          style={{ padding: Config.spacingNormal }}
+          data={this._data}
+          keyExtractor={(item, index) => `news ${index}`}
+          renderItem={({ item, index }) => <NewsItem {...item} onExpand={() => this._onCartItemExpand(index)}/>}
+        />
       </Scene>
-    )
+    );
   }
 }
 
@@ -44,14 +44,8 @@ NewsScreen.navigationOptions = {
   drawerLabel: <DrawerComponent>
     <IntlText id="drawer.news"/>
   </DrawerComponent>,
-  drawerIcon: () => (
+  drawerIcon:
     <DrawerIcon name="flare"/>
-  ),
 };
 
-export default NewsScreen
-
-
-
-
-
+export default NewsScreen;

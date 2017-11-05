@@ -8,7 +8,13 @@ import { IntlText } from '../../Translation/IntlText';
 
 const AgendaScreen = ({ navigation }) => (
   <Scene>
-    <Toolbar/>
+    <Toolbar
+      title="drawer.agenda"
+      leftButton={{
+        icon: 'menu',
+        onPress: () => navigation.navigate('DrawerOpen')
+      }}
+    />
     <ScrollView>
       <Text>
         Tu będzie AgendaScreen
@@ -21,10 +27,8 @@ AgendaScreen.navigationOptions = {
   drawerLabel: <DrawerComponent>
     <IntlText id="drawer.agenda"/>
   </DrawerComponent>,
-  drawerIcon: () => (
+  drawerIcon:
     <DrawerIcon name="school"/>
-  ),
 };
 
 export default AgendaScreen;
-
