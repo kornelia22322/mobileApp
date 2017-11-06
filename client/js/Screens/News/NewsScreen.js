@@ -13,8 +13,20 @@ class NewsScreen extends React.Component {
   _data = Config.server.getNews();
   listRef: any;
 
-  _onCartItemExpand(index: number) {
-    this.listRef.scrollToIndex({ index });
+  /*
+   _onCartItemExpand(index: number) {
+   this.listRef.scrollToIndex({ index });
+  }
+   */
+  componentDidMount() {
+    fetch(`${Config.url}/messages`)
+      .then((response) => response.json())
+      .then((responseJson) => {
+        console.log(responseJson);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }
 
   render() {

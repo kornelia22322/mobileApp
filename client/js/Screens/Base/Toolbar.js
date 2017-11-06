@@ -1,10 +1,10 @@
-import React from 'react'
-import { Platform, View } from 'react-native'
-import DesignUtils from '../../Utils/DesignUtils'
-import { MKButton } from 'react-native-material-kit'
-import Config from '../../Utils/Config'
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
-import { IntlText } from '../../Translation/IntlText'
+import React from 'react';
+import { Platform, View } from 'react-native';
+import DesignUtils from '../../Utils/DesignUtils';
+import { MKButton } from 'react-native-material-kit';
+import Config from '../../Utils/Config';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { IntlText } from '../../Translation/IntlText';
 
 export default class Toolbar extends React.Component {
   render() {
@@ -58,7 +58,7 @@ export default class Toolbar extends React.Component {
 
   _renderButton (button) {
     if (!button)
-      return
+      return;
     return (
       <View
         style={{
