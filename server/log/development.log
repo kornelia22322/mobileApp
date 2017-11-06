@@ -93,10 +93,10 @@ Completed 201 Created in 25ms (Views: 0.5ms | ActiveRecord: 23.5ms)
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
 Started GET "/messages" for 127.0.0.1 at 2017-10-29 02:36:32 +0200
-  
+
 ActiveRecord::NoDatabaseError (FATAL:  role "sfi" does not exist
 ):
-  
+
 activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:699:in `rescue in connect'
 activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:695:in `connect'
 activerecord (5.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:220:in `initialize'
@@ -260,5 +260,44 @@ Started GET "/messages" for 127.0.0.1 at 2017-10-29 02:11:09 +0100
 Processing by MessagesController#index as */*
   [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
 Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 02:20:43 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (4.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+Completed 200 OK in 14ms (Views: 1.0ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 02:21:16 +0200
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"Siema", "message"=>{"content"=>"Siema"}}
+Unpermitted parameter: :message
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "Siema"], ["created_at", "2017-10-29 00:21:16.190836"], ["updated_at", "2017-10-29 00:21:16.190836"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 14ms (Views: 0.3ms | ActiveRecord: 11.7ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 02:21:20 +0200
+Processing by MessagesController#create as JSON
+  Parameters: {"content"=>"Siema xdd", "message"=>{"content"=>"Siema xdd"}}
+Unpermitted parameter: :message
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "Siema xdd"], ["created_at", "2017-10-29 00:21:20.933828"], ["updated_at", "2017-10-29 00:21:20.933828"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 6ms (Views: 0.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 02:21:23 +0200
+Processing by MessagesController#index as */*
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 02:33:27 +0200
+Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (1.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 1.3ms)
 
 

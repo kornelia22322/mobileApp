@@ -27,9 +27,8 @@ CodesScreen.navigationOptions = {
   drawerLabel: <DrawerComponent>
     <IntlText id="drawer.codes"/>
   </DrawerComponent>,
-  drawerIcon: () => (
+  drawerIcon:
     <DrawerIcon name="style"/>
-  ),
 };
 
 export default CodesScreen;

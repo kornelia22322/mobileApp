@@ -27,9 +27,8 @@ AgendaScreen.navigationOptions = {
   drawerLabel: <DrawerComponent>
     <IntlText id="drawer.agenda"/>
   </DrawerComponent>,
-  drawerIcon: () => (
+  drawerIcon:
     <DrawerIcon name="school"/>
-  ),
 };
 
 export default AgendaScreen;

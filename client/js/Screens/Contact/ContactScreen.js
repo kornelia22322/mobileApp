@@ -26,9 +26,8 @@ ContactScreen.navigationOptions = {
   drawerLabel: <DrawerComponent>
     <IntlText id="drawer.contact"/>
   </DrawerComponent>,
-  drawerIcon: () => (
+  drawerIcon:
     <DrawerIcon name="mail"/>
-  ),
 };
 
 export default ContactScreen;
