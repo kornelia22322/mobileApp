@@ -1,23 +1,41 @@
 import React from 'react';
-import { ScrollView, Text } from 'react-native';
-import Scene from '../../GlamorousComponents/Scene';
-import { IntlText } from '../../Translation/IntlText';
-import TabBarIcon from '../../GlamorousComponents/TabBarIcon';
-import TabBarLabel from '../../GlamorousComponents/TabBarLabel';
+import DesignUtil from '../../Utils/DesignUtils';
+import { TabBarTop, TabNavigator } from 'react-navigation';
+import LecturersScreen from './Lecturers/LecturersScreen';
+import Config from '../../Utils/Config';
+import CalendarScreen from './Calendar/CalendarScreen';
 
-const AgendaScreen = ({ navigation }) => (
-  <Scene>
-    <ScrollView>
-      <Text>
-        Tu będzie AgendaScreen
-      </Text>
-    </ScrollView>
-  </Scene>
+
+const AgendaTabNavigation = TabNavigator(
+  {
+    Lecturers: {
+      screen: LecturersScreen
+    },
+    Calendar: {
+      screen: CalendarScreen
+    }
+  },
+  {
+    tabBarComponent: TabBarTop,
+    tabBarOptions: {
+      showIcon: false,
+      pressOpacity: Config.bottomBarPressOpacity,
+      activeTintColor: Config.bottomBarSelectionColor,
+      inactiveTintColor: Config.bottomBarDefaultColor,
+      style: {
+        backgroundColor: Config.bottomBarBackgroundColor
+      }
+    }
+  }
 );
 
-AgendaScreen.navigationOptions = {
-  tabBarLabel: ({ focused, tintColor }) => (<TabBarLabel focused={focused} tintColor={tintColor}><Text><IntlText id="drawer.agenda"/></Text></TabBarLabel>),
-  tabBarIcon: ({ tintColor }) => (<TabBarIcon source={require('./../../Assets/Icons/ic_event_black_24dp.png')} tintColor={tintColor}/>)
-};
+const AgendaScreen = ({ navigation }) => (
+  <AgendaTabNavigation/>
+);
 
-export default AgendaScreen;
+
+export default DesignUtil.createTabCard(AgendaScreen, {
+  name: "drawer.agenda",
+  icon: "school"
+});
+

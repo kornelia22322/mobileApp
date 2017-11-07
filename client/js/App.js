@@ -1,13 +1,13 @@
 import React from 'react';
-import { TabNavigator, TabBarBottom } from 'react-navigation';
+import { TabBarTop, TabNavigator } from 'react-navigation';
 import NewsScreen from './Screens/News/NewsScreen';
-import LecturersScreen from './Screens/Lecturers/LecturersScreen';
 import AboutScreen from './Screens/About/AboutScreen';
 import CodesScreen from './Screens/Codes/CodesScreen';
 import AgendaScreen from './Screens/Agenda/AgendaScreen';
 import T from './Translation/Translator';
 import { Text, View } from 'react-native';
 import Toolbar from './Screens/Base/Toolbar';
+import Config from './Utils/Config';
 const TabNavigation = TabNavigator(
   {
     News: {
@@ -17,10 +17,6 @@ const TabNavigation = TabNavigator(
     Agenda: {
       path: '/Agenda',
       screen: AgendaScreen
-    },
-    Lecturers: {
-      path: '/Lecturers',
-      screen: LecturersScreen
     },
     About: {
       path: '/About',
@@ -32,8 +28,22 @@ const TabNavigation = TabNavigator(
     }
   },
   {
-    tabBarComponent:TabBarBottom,
+    tabBarComponent: TabBarTop,
     tabBarPosition:'bottom',
+    tabBarOptions: {
+      showIcon: true,
+      pressOpacity: Config.bottomBarPressOpacity,
+      activeTintColor: Config.bottomBarSelectionColor,
+      inactiveTintColor: Config.bottomBarDefaultColor,
+      indicatorStyle: {
+        backgroundColor: 'transparent'
+      },
+      style: {
+        backgroundColor: Config.bottomBarBackgroundColor
+      }
+    },
+    swipeEnabled: false,
+    animationEnabled: false,
     initialRouteName: 'News'
   }
 );
