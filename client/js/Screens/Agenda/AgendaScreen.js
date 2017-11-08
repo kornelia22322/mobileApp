@@ -33,6 +33,16 @@ const AgendaScreen = ({ navigation }) => (
   <AgendaTabNavigation/>
 );
 
+<<<<<<< HEAD
+=======
+AgendaScreen.navigationOptions = {
+  drawerLabel: <DrawerComponent>
+    <IntlText id="drawer.agenda"/>
+  </DrawerComponent>,
+  drawerIcon:
+    <DrawerIcon name="school"/>
+};
+>>>>>>> develop
 
 export default DesignUtil.createTabCard(AgendaScreen, {
   name: "drawer.agenda",

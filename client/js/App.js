@@ -1,5 +1,5 @@
 import React from 'react';
-import { TabBarTop, TabNavigator } from 'react-navigation';
+import { TabBarTop,TabBarBottom, TabNavigator } from 'react-navigation';
 import NewsScreen from './Screens/News/NewsScreen';
 import AboutScreen from './Screens/About/AboutScreen';
 import CodesScreen from './Screens/Codes/CodesScreen';
@@ -11,19 +11,15 @@ import Config from './Utils/Config';
 const TabNavigation = TabNavigator(
   {
     News: {
-      path: '/News',
       screen: NewsScreen
     },
     Agenda: {
-      path: '/Agenda',
       screen: AgendaScreen
     },
     About: {
-      path: '/About',
       screen: AboutScreen
     },
     Codes: {
-      path: '/Codes',
       screen: CodesScreen
     }
   },
@@ -42,8 +38,8 @@ const TabNavigation = TabNavigator(
         backgroundColor: Config.bottomBarBackgroundColor
       }
     },
-    swipeEnabled: false,
-    animationEnabled: false,
+    swipeEnabled: true,
+    animationEnabled: true,
     initialRouteName: 'News'
   }
 );

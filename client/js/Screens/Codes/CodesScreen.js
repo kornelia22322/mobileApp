@@ -15,8 +15,16 @@ const CodesScreen = ({ navigation }) => (
 );
 
 CodesScreen.navigationOptions = {
+<<<<<<< HEAD
   tabBarLabel: ({ focused, tintColor }) => (<TabBarLabel focused={focused} tintColor={tintColor}><Text><IntlText id="drawer.codes"/></Text></TabBarLabel>),
   tabBarIcon: ({ tintColor }) => (<TabBarIcon source={require('./../../Assets/Icons/ic_center_focus_strong_black_24dp.png')} tintColor={tintColor}/>)
+=======
+  drawerLabel: <DrawerComponent>
+    <IntlText id="drawer.codes"/>
+  </DrawerComponent>,
+  drawerIcon:
+    <DrawerIcon name="style"/>
+>>>>>>> develop
 };
 
 export default CodesScreen;

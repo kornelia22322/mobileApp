@@ -11,7 +11,7 @@ export default class Toolbar extends React.Component {
     return (
       <View style={[{
         width: '100%',
-        height: Config.ToolbarHeight,
+        height: Config.toolbarHeight,
         backgroundColor: Config.MainColor
       },
       DesignUtils.getShadowStyle(2)

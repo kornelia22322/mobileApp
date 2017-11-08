@@ -13,8 +13,16 @@ const ContactScreen = ({ navigation }) => (
 );
 
 ContactScreen.navigationOptions = {
+<<<<<<< HEAD
   title:<IntlText id="drawer.news"/>,
   icon:require('../../Assets/Icons/app_logo.png')
+=======
+  drawerLabel: <DrawerComponent>
+    <IntlText id="drawer.contact"/>
+  </DrawerComponent>,
+  drawerIcon:
+    <DrawerIcon name="mail"/>
+>>>>>>> develop
 };
 
 export default ContactScreen;
