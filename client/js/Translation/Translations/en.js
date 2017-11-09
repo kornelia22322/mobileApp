@@ -8,7 +8,7 @@ export default {
     about:'About'
   },
   agendaTabBar: {
-    people:'People',
+    speakers:'Speakers',
     calendar:'Calendar'
   },
   languages: {
