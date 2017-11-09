@@ -24,7 +24,6 @@ export default class Toolbar extends React.Component {
         }}
         >
           {this._renderTitle(this.props.title)}
-          {this._renderButton(this.props.leftButton)}
           {this._renderButton(this.props.rightButton)}
         </View>
       </View>
@@ -37,7 +36,7 @@ export default class Toolbar extends React.Component {
     return (
       <View style={{
         position: 'absolute',
-        left: (Platform.OS === 'ios') ? 0 : 72,
+        left: (Platform.OS === 'ios') ? 0 : Config.spacingLarge,
         right: 0,
         top: 0,
         bottom: 0,

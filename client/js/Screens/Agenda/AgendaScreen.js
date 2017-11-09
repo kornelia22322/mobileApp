@@ -15,13 +15,10 @@ const AgendaTabNavigation = TabNavigator(
     }
   },
   {
-    swipeEnabled: false,
-    animationEnabled: false,
-    /*
-    There seems to be an issue with nested tab navigators, it requires disabling animation
-    https://github.com/react-community/react-navigation/issues/662
-    */
+    swipeEnabled: true,
+    animationEnabled: true,
     tabBarComponent: TabBarTop,
+    tabBarPosition: 'top',
     tabBarOptions: {
       showIcon: false,
       pressOpacity: Config.bottomBarPressOpacity,
@@ -29,6 +26,9 @@ const AgendaTabNavigation = TabNavigator(
       inactiveTintColor: Config.bottomBarDefaultColor,
       style: {
         backgroundColor: Config.bottomBarBackgroundColor
+      },
+      indicatorStyle: {
+        backgroundColor: 'transparent'
       }
     }
   }

@@ -9,6 +9,7 @@ import { Text, View } from 'react-native';
 import Toolbar from './Screens/Base/Toolbar';
 import Config from './Utils/Config';
 import SettingsScreen from './Screens/Settings/SettingsScreen';
+import DesignUtils from './Utils/DesignUtils';
 const TabNavigation = TabNavigator(
   {
     Agenda: {
@@ -39,11 +40,12 @@ const TabNavigation = TabNavigator(
         backgroundColor: 'transparent'
       },
       style: {
+        ...DesignUtils.getShadowStyle(4),
         backgroundColor: Config.bottomBarBackgroundColor
       }
     },
-    swipeEnabled: true,
-    animationEnabled: true,
+    swipeEnabled: false,
+    animationEnabled: false,
     initialRouteName: 'News'
   }
 );
