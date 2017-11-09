@@ -6,14 +6,12 @@ const LecturersScreen = ({ navigation }) => (
   <Scene>
     <ScrollView>
       <Text>
-        Tu będzie AboutScreen
+        Tu będzie People
       </Text>
     </ScrollView>
   </Scene>
 );
 
-
-export default DesignUtil.createTabCard(LecturersScreen, {
-  name: "drawer.lecturers"
+export default DesignUtil.createTopTabCard(LecturersScreen, {
+  name: 'agendatabbar.lecturers'
 });
-

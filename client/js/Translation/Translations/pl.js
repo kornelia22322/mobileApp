@@ -1,12 +1,16 @@
 export default {
-  drawer: {
+  bottomnavbar: {
     agenda: 'Agenda',
-    news: 'Wiadomości',
+    news: 'Ogłoszenia',
     codes: 'Kody',
     settings: 'Ustawienia',
     contact: 'Kontakt',
     lecturers:'Prelegenci',
     about:'O SFI'
+  },
+  agendatabbar: {
+    lecturers:'Prelegenci',
+    calendar:'Kalendarz'
   },
   languages: {
     pl: 'Polski',

@@ -14,7 +14,7 @@ const AboutScreen = ({ navigation }) => (
 
 
 export default DesignUtil.createTabCard(AboutScreen, {
-  name: "drawer.about",
-  icon: "sentiment-satisfied"
+  name: 'bottomnavbar.about',
+  icon: 'info-outline'
 });
 

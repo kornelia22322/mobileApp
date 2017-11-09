@@ -1,5 +1,5 @@
 import React from 'react';
-import { TabBarTop,TabBarBottom, TabNavigator } from 'react-navigation';
+import { TabBarTop, TabNavigator } from 'react-navigation';
 import NewsScreen from './Screens/News/NewsScreen';
 import AboutScreen from './Screens/About/AboutScreen';
 import CodesScreen from './Screens/Codes/CodesScreen';
@@ -8,19 +8,23 @@ import T from './Translation/Translator';
 import { Text, View } from 'react-native';
 import Toolbar from './Screens/Base/Toolbar';
 import Config from './Utils/Config';
+import SettingsScreen from './Screens/Settings/SettingsScreen';
 const TabNavigation = TabNavigator(
   {
-    News: {
-      screen: NewsScreen
-    },
     Agenda: {
       screen: AgendaScreen
     },
     About: {
       screen: AboutScreen
     },
+    News: {
+      screen: NewsScreen
+    },
     Codes: {
       screen: CodesScreen
+    },
+    Settings: {
+      screen: SettingsScreen
     }
   },
   {

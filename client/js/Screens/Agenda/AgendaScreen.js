@@ -5,7 +5,6 @@ import LecturersScreen from './Lecturers/LecturersScreen';
 import Config from '../../Utils/Config';
 import CalendarScreen from './Calendar/CalendarScreen';
 
-
 const AgendaTabNavigation = TabNavigator(
   {
     Lecturers: {
@@ -16,6 +15,12 @@ const AgendaTabNavigation = TabNavigator(
     }
   },
   {
+    swipeEnabled: false,
+    animationEnabled: false,
+    /*
+    There seems to be an issue with nested tab navigators, it requires disabling animation
+    https://github.com/react-community/react-navigation/issues/662
+    */
     tabBarComponent: TabBarTop,
     tabBarOptions: {
       showIcon: false,
@@ -33,19 +38,8 @@ const AgendaScreen = ({ navigation }) => (
   <AgendaTabNavigation/>
 );
 
-<<<<<<< HEAD
-=======
-AgendaScreen.navigationOptions = {
-  drawerLabel: <DrawerComponent>
-    <IntlText id="drawer.agenda"/>
-  </DrawerComponent>,
-  drawerIcon:
-    <DrawerIcon name="school"/>
-};
->>>>>>> develop
-
 export default DesignUtil.createTabCard(AgendaScreen, {
-  name: "drawer.agenda",
-  icon: "school"
+  name: 'bottomnavbar.agenda',
+  icon: 'school'
 });
 

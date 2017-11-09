@@ -2,14 +2,9 @@ import { Platform } from 'react-native';
 import MockServer from './MockServer';
 
 const Config = {
-<<<<<<< HEAD
-  url: (Platform.OS === 'ios') ? 'http://localhost:3000' : 'http://10.0.2.2:3000',
-  MainColor: '#1b51e7', // Color of accents. Core of app design.
-=======
   url: (Platform.OS === 'ios') ? 'http://localhost:3000' : 'http://10.0.2.2:3000', // GenyMotion -> 'http://10.0.3.2:3000'
   server: MockServer,
   MainColor: '#42688d', // Color of accents. Core of app design.
->>>>>>> develop
   SupportiveColor: '#acacac', // Default color for components.
   textColorStrong: '#151515',
   textColorSupportive: '#404040',

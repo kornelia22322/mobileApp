@@ -1,12 +1,15 @@
 export default {
-  drawer: {
+  bottomnavbar: {
     agenda: 'Agenda',
     news: 'News',
     codes: 'Codes',
     settings: 'Settings',
     contact: 'Contact',
-    lecturers:'Lecturers',
     about:'About'
+  },
+  agendatabbar: {
+    lecturers:'People',
+    calendar:'Calendar'
   },
   languages: {
     pl: 'Polish',
