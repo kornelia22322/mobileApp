@@ -14,7 +14,7 @@ const AboutScreen = ({ navigation }) => (
 
 
 export default DesignUtil.createTabCard(AboutScreen, {
-  name: 'bottomnavbar.about',
+  name: 'bottomNavBar.about',
   icon: 'info-outline'
 });
 

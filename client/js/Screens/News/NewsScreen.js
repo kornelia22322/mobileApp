@@ -36,7 +36,7 @@ class NewsScreen extends React.Component {
   }
 }
 export default DesignUtil.createTabCard(NewsScreen, {
-  name: 'bottomnavbar.news',
+  name: 'bottomNavBar.news',
   icon: 'flare'
 });
 

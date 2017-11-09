@@ -39,7 +39,7 @@ const AgendaScreen = ({ navigation }) => (
 );
 
 export default DesignUtil.createTabCard(AgendaScreen, {
-  name: 'bottomnavbar.agenda',
+  name: 'bottomNavBar.agenda',
   icon: 'school'
 });
 

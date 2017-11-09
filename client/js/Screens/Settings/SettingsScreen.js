@@ -42,7 +42,7 @@ class SettingsScreen extends React.Component {
           </TouchableOpacity>
           <TranslatableComponent>
             <Text>
-              {T.getTranslation('bottomnavbar.news')}
+              {T.getTranslation('bottomNavBar.news')}
             </Text>
           </TranslatableComponent>
         </ScrollView>
@@ -52,7 +52,7 @@ class SettingsScreen extends React.Component {
 }
 
 export default DesignUtil.createTabCard(SettingsScreen, {
-  name: 'bottomnavbar.settings',
+  name: 'bottomNavBar.settings',
   icon: 'settings'
 });
 

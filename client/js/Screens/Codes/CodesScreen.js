@@ -12,7 +12,7 @@ const CodesScreen = ({ navigation }) => (
   </Scene>
 );
 export default DesignUtil.createTabCard(CodesScreen, {
-  name: 'bottomnavbar.codes',
+  name: 'bottomNavBar.codes',
   icon: 'subtitles'
 });
 

@@ -1,5 +1,5 @@
 export default {
-  bottomnavbar: {
+  bottomNavBar: {
     agenda: 'Agenda',
     news: 'News',
     codes: 'Codes',
