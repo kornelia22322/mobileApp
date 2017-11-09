@@ -1,13 +1,11 @@
 import React from 'react';
 import { ScrollView, Text, TouchableOpacity } from 'react-native';
-import DrawerIcon from '../../Drawer/DrawerIcon';
-import Toolbar from '../Base/Toolbar';
 import Scene from '../../GlamorousComponents/Scene';
 import T from '../../Translation/Translator';
 import SupportedLanguages from '../../Translation/SupportedLanguages';
 import { IntlText } from '../../Translation/IntlText';
-import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
 import TranslatableComponent from '../../Translation/TranslatableComponent';
+import DesignUtil from '../../Utils/DesignUtils';
 
 class SettingsScreen extends React.Component {
   constructor(props) {
@@ -28,13 +26,6 @@ class SettingsScreen extends React.Component {
   render() {
     return (
       <Scene style={{ alignItems: 'center' }}>
-        <Toolbar
-          title="drawer.settings"
-          leftButton={{
-            icon: 'menu',
-            onPress: () => this.props.navigation.navigate('DrawerOpen')
-          }}
-        />
         <ScrollView>
           <TouchableOpacity
             style={{ margin: 16, flexDirection: 'column' }}
@@ -51,7 +42,7 @@ class SettingsScreen extends React.Component {
           </TouchableOpacity>
           <TranslatableComponent>
             <Text>
-              {T.getTranslation('drawer.news')}
+              {T.getTranslation('bottomNavBar.news')}
             </Text>
           </TranslatableComponent>
         </ScrollView>
@@ -60,11 +51,9 @@ class SettingsScreen extends React.Component {
   }
 }
 
-SettingsScreen.navigationOptions = {
-  drawerLabel: <DrawerComponent>
-    <IntlText id="drawer.settings"/>
-  </DrawerComponent>,
-  drawerIcon: <DrawerIcon name="settings-applications"/>
-};
+export default DesignUtil.createTabCard(SettingsScreen, {
+  name: 'bottomNavBar.settings',
+  icon: 'settings'
+});
 
-export default SettingsScreen;
+

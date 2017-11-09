@@ -14,6 +14,12 @@ const Config = {
   fontToolbar: 18,
   toolbarTitleColor: '#BBBBBB',
 
+  bottomBarPressOpacity: 0.85,
+  bottomBarBackgroundColor: '#DDDDDD',
+  bottomBarSelectionColor: '#1b51e7',
+  bottomBarDefaultColor: '#354b55',
+  bottomBarIconSize: 20,
+
   smallFontSize: 8,
   mediumFontSize: 14,
   headerFontSize: 24,
