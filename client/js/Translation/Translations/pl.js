@@ -8,7 +8,7 @@ export default {
     people:'Prelegenci',
     about:'O SFI'
   },
-  agendatabbar: {
+  agendaTabBar: {
     people:'Prelegenci',
     calendar:'Kalendarz'
   },

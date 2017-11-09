@@ -7,7 +7,7 @@ export default {
     contact: 'Contact',
     about:'About'
   },
-  agendatabbar: {
+  agendaTabBar: {
     people:'People',
     calendar:'Calendar'
   },
