@@ -13,5 +13,5 @@ const LecturersScreen = ({ navigation }) => (
 );
 
 export default DesignUtil.createTopTabCard(LecturersScreen, {
-  name: 'agendatabbar.lecturers'
+  name: 'agendaTabBar.people'
 });

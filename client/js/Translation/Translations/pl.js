@@ -5,11 +5,11 @@ export default {
     codes: 'Kody',
     settings: 'Ustawienia',
     contact: 'Kontakt',
-    lecturers:'Prelegenci',
+    people:'Prelegenci',
     about:'O SFI'
   },
   agendatabbar: {
-    lecturers:'Prelegenci',
+    people:'Prelegenci',
     calendar:'Kalendarz'
   },
   languages: {
