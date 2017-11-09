@@ -15,6 +15,6 @@ const CalendarScreen = ({ navigation }) => (
 
 
 export default DesignUtil.createTopTabCard(CalendarScreen, {
-  name: 'agendatabbar.calendar'
+  name: 'agendaTabBar.calendar'
 });
 
