@@ -25,7 +25,7 @@ class NewsScreen extends React.Component {
       <Scene>
         <FlatList
           ref={(ref) => this.listRef = ref}
-          ListFooterComponent={() => <View style={{ height: Config.toolbarHeight + 2 * Config.spacingSmall }}/>}
+          ListFooterComponent={() => <View style={{ height: 2 * Config.spacingSmall }}/>}
           style={{ padding: Config.spacingNormal }}
           data={this._data}
           keyExtractor={(item, index) => `news ${index}`}

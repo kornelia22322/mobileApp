@@ -44,6 +44,7 @@ const TabNavigation = TabNavigator(
         backgroundColor: Config.bottomBarBackgroundColor
       }
     },
+    lazy: true,
     swipeEnabled: false,
     animationEnabled: false,
     initialRouteName: 'News'
