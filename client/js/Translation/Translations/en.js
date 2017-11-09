@@ -16,7 +16,7 @@ export default {
     en: 'English'
   },
   toolbar: {
-    sfi:'SFI IT Festival' // TODO: CORRECT TRANSLATIONS
+    sfi:'SFI Academic IT Festival'
   },
   settings: {
     changeLanguage: 'Change language:'
