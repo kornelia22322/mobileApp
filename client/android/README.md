@@ -6,6 +6,9 @@ make sure you have installed *yarn*
 npm install
 ```
 
+also make sure you have Java 8 and JAVA_HOME environment variable is set to 
+jdk1.8.0_### (actual build # may vary)
+
 ## run
 Run simulator using XCode or Android Studio. You need properly configured AVD and SDK for Android Development.
 

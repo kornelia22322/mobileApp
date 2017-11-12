@@ -1,34 +1,45 @@
 import React from 'react';
-import { ScrollView, Text } from 'react-native';
-import DrawerIcon from '../../Drawer/DrawerIcon';
-import Scene from '../../GlamorousComponents/Scene';
-import Toolbar from '../Base/Toolbar';
-import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
-import { IntlText } from '../../Translation/IntlText';
+import DesignUtil from '../../Utils/DesignUtils';
+import { TabBarTop, TabNavigator } from 'react-navigation';
+import LecturersScreen from './Lecturers/LecturersScreen';
+import Config from '../../Utils/Config';
+import CalendarScreen from './Calendar/CalendarScreen';
 
-const AgendaScreen = ({ navigation }) => (
-  <Scene>
-    <Toolbar
-      title="drawer.agenda"
-      leftButton={{
-        icon: 'menu',
-        onPress: () => navigation.navigate('DrawerOpen')
-      }}
-    />
-    <ScrollView>
-      <Text>
-        Tu będzie AgendaScreen
-      </Text>
-    </ScrollView>
-  </Scene>
+const AgendaTabNavigation = TabNavigator(
+  {
+    Lecturers: {
+      screen: LecturersScreen
+    },
+    Calendar: {
+      screen: CalendarScreen
+    }
+  },
+  {
+    swipeEnabled: true,
+    animationEnabled: true,
+    tabBarComponent: TabBarTop,
+    tabBarPosition: 'top',
+    tabBarOptions: {
+      showIcon: false,
+      pressOpacity: Config.bottomBarPressOpacity,
+      activeTintColor: Config.bottomBarSelectionColor,
+      inactiveTintColor: Config.bottomBarDefaultColor,
+      style: {
+        backgroundColor: Config.bottomBarBackgroundColor
+      },
+      indicatorStyle: {
+        backgroundColor: 'transparent'
+      }
+    }
+  }
 );
 
-AgendaScreen.navigationOptions = {
-  drawerLabel: <DrawerComponent>
-    <IntlText id="drawer.agenda"/>
-  </DrawerComponent>,
-  drawerIcon:
-    <DrawerIcon name="school"/>
-};
+const AgendaScreen = ({ navigation }) => (
+  <AgendaTabNavigation/>
+);
 
-export default AgendaScreen;
+export default DesignUtil.createTabCard(AgendaScreen, {
+  name: 'bottomNavBar.agenda',
+  icon: 'school'
+});
+

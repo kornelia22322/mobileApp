@@ -1,10 +1,10 @@
-import React from 'react'
-import { Platform, View } from 'react-native'
-import DesignUtils from '../../Utils/DesignUtils'
-import { MKButton } from 'react-native-material-kit'
-import Config from '../../Utils/Config'
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
-import { IntlText } from '../../Translation/IntlText'
+import React from 'react';
+import { Platform, View } from 'react-native';
+import DesignUtils from '../../Utils/DesignUtils';
+import { MKButton } from 'react-native-material-kit';
+import Config from '../../Utils/Config';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { IntlText } from '../../Translation/IntlText';
 
 export default class Toolbar extends React.Component {
   render() {
@@ -24,13 +24,11 @@ export default class Toolbar extends React.Component {
         }}
         >
           {this._renderTitle(this.props.title)}
-          {this._renderButton(this.props.leftButton)}
           {this._renderButton(this.props.rightButton)}
         </View>
       </View>
-    )
+    );
   }
-
   _renderTitle(title) {
     if (!title)
       return;
@@ -38,7 +36,7 @@ export default class Toolbar extends React.Component {
     return (
       <View style={{
         position: 'absolute',
-        left: (Platform.OS === 'ios') ? 0 : 72,
+        left: (Platform.OS === 'ios') ? 0 : Config.spacingLarge,
         right: 0,
         top: 0,
         bottom: 0,
@@ -53,12 +51,12 @@ export default class Toolbar extends React.Component {
         id={title}
         />
       </View>
-    )
+    );
   }
 
-  _renderButton (button) {
+  _renderButton(button) {
     if (!button)
-      return
+      return;
     return (
       <View
         style={{
@@ -77,12 +75,12 @@ export default class Toolbar extends React.Component {
           maskColor="transparent"
         >
           <MaterialIcons
-            style={{color: Config.toolbarTitleColor, margin: Config.spacingLarge}}
+            style={{ color: Config.toolbarTitleColor, margin: Config.spacingLarge }}
             name={button.icon}
             size={32}
           />
         </MKButton>
       </View>
-    )
-  };
+    );
+  }
 }

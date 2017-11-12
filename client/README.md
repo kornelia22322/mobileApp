@@ -20,6 +20,10 @@ https://facebook.github.io/react-native/docs/getting-started.html (but use `npm 
 ```
 react-native run-android
 ```
+or
+```
+react-native run-ios
+```
 This gonna work it most cases but sometimes it does not ;)
 
 ## debug 

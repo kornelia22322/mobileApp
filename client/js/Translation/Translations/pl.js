@@ -1,14 +1,23 @@
 export default {
-  drawer: {
+  bottomNavBar: {
     agenda: 'Agenda',
-    news: 'Wiadomości',
+    news: 'Ogłoszenia',
     codes: 'Kody',
     settings: 'Ustawienia',
-    contact: 'Kontakt'
+    contact: 'Kontakt',
+    speakers:'Prelegenci',
+    about:'O SFI'
+  },
+  agendaTabBar: {
+    speakers:'Prelegenci',
+    calendar:'Kalendarz'
   },
   languages: {
     pl: 'Polski',
     en: 'Agielski'
+  },
+  toolbar: {
+    sfi:'Festiwal informatyczny SFI'
   },
   settings: {
     changeLanguage: 'Zmień język:'
