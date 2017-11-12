@@ -1,22 +1,15 @@
 export default {
-  bottomNavBar: {
+  drawer: {
     agenda: 'Agenda',
     news: 'News',
     codes: 'Codes',
     settings: 'Settings',
-    contact: 'Contact',
-    about:'About'
+    contact: 'Contact'
   },
-  agendaTabBar: {
-    speakers:'Speakers',
-    calendar:'Calendar'
-  },
+  en: 'English',
   languages: {
     pl: 'Polish',
     en: 'English'
-  },
-  toolbar: {
-    sfi:'SFI Academic IT Festival'
   },
   settings: {
     changeLanguage: 'Change language:'

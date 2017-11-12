@@ -5,11 +5,11 @@ import { Text } from 'react-native';
 export class IntlText extends React.Component {
   constructor(props) {
     super(props);
-    this.id = T.addRef(this);
+    this.id = T.__addRef(this);
   }
 
   componentWillUnmount() {
-    T.removeRef(this.id);
+    T.__removeRef(this.id);
   }
 
   render() {

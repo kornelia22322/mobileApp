@@ -1,8 +1,8 @@
-import { Platform } from 'react-native';
-import MockServer from './MockServer';
+import { Platform } from 'react-native'
+import MockServer from './MockServer'
 
 const Config = {
-  url: (Platform.OS === 'ios') ? 'http://localhost:3000' : 'http://10.0.2.2:3000', // GenyMotion -> 'http://10.0.3.2:3000'
+  url: (Platform.OS === 'ios') ? 'http://localhost:3000' : 'http://10.0.2.2:3000',
   server: MockServer,
   MainColor: '#42688d', // Color of accents. Core of app design.
   SupportiveColor: '#acacac', // Default color for components.
@@ -13,12 +13,6 @@ const Config = {
   toolbarHeight: 64,
   fontToolbar: 18,
   toolbarTitleColor: '#BBBBBB',
-
-  bottomBarPressOpacity: 0.85,
-  bottomBarBackgroundColor: '#DDDDDD',
-  bottomBarSelectionColor: '#1b51e7',
-  bottomBarDefaultColor: '#354b55',
-  bottomBarIconSize: 20,
 
   smallFontSize: 8,
   mediumFontSize: 14,
