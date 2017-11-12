@@ -1,9 +1,4 @@
-import React from 'react';
 import { Platform } from 'react-native';
-import TabBarLabel from '../GlamorousComponents/TabBarLabel';
-import { IntlText } from '../Translation/IntlText';
-import Config from './Config';
-import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
 class DesignUtils {
   static getShadowStyle(elevation) {
@@ -16,33 +11,6 @@ class DesignUtils {
       };
     else
       return { elevation };
-  }
-
-  static createTabCard(view, config) {
-    view.navigationOptions = {
-      tabBarLabel: ({ focused, tintColor }) => (
-        <TabBarLabel focused={focused} tintColor={tintColor}>
-          <IntlText id={config.name}/>
-        </TabBarLabel>),
-      tabBarIcon: ({ tintColor }) => (
-        <MaterialIcon
-          name={config.icon ? config.icon : "flare"}
-          size={Config.bottomBarIconSize}
-          color={tintColor}
-        />
-      )
-    };
-    return view;
-  }
-
-  static createTopTabCard(view, config) {
-    view.navigationOptions = {
-      tabBarLabel: ({ focused, tintColor }) => (
-        <TabBarLabel focused={focused} tintColor={tintColor}>
-          <IntlText id={config.name}/>
-        </TabBarLabel>)
-    };
-    return view;
   }
 }
 

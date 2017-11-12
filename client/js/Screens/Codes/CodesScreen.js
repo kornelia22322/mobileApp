@@ -1,12 +1,34 @@
 import React from 'react';
-import DesignUtil from '../../Utils/DesignUtils';
-import QRScanner from '../../Utils/QRScanner';
+import { ScrollView, Text } from 'react-native';
+import DrawerIcon from '../../Drawer/DrawerIcon';
+import Toolbar from '../Base/Toolbar';
+import Scene from '../../GlamorousComponents/Scene';
+import DrawerComponent from '../../GlamorousComponents/DrawerComponent';
+import { IntlText } from '../../Translation/IntlText';
 
 const CodesScreen = ({ navigation }) => (
-  <QRScanner />
+  <Scene>
+    <Toolbar
+      title="drawer.codes"
+      leftButton={{
+        icon: 'menu',
+        onPress: () => navigation.navigate('DrawerOpen')
+      }}
+    />
+    <ScrollView>
+      <Text>
+        Tu będzie CodesScreen
+      </Text>
+    </ScrollView>
+  </Scene>
 );
-export default DesignUtil.createTabCard(CodesScreen, {
-  name: 'bottomNavBar.codes',
-  icon: 'subtitles'
-});
 
+CodesScreen.navigationOptions = {
+  drawerLabel: <DrawerComponent>
+    <IntlText id="drawer.codes"/>
+  </DrawerComponent>,
+  drawerIcon:
+    <DrawerIcon name="style"/>
+};
+
+export default CodesScreen;

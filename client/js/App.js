@@ -1,53 +1,44 @@
 import React from 'react';
-import { TabBarTop, TabNavigator } from 'react-navigation';
+import { DrawerNavigator } from 'react-navigation';
 import NewsScreen from './Screens/News/NewsScreen';
-import AboutScreen from './Screens/About/AboutScreen';
+import DrawerContent from './Drawer/DrawerContent';
+import ContactScreen from './Screens/Contact/ContactScreen';
 import CodesScreen from './Screens/Codes/CodesScreen';
 import AgendaScreen from './Screens/Agenda/AgendaScreen';
-import T from './Translation/Translator';
-import { Text, View } from 'react-native';
-import Toolbar from './Screens/Base/Toolbar';
-import Config from './Utils/Config';
 import SettingsScreen from './Screens/Settings/SettingsScreen';
-import DesignUtils from './Utils/DesignUtils';
-const TabNavigation = TabNavigator(
+import T from './Translation/Translator';
+import Config from './Utils/Config';
+import { Text } from 'react-native';
+
+const DrawerNavigation = DrawerNavigator(
   {
-    Agenda: {
-      screen: AgendaScreen
-    },
-    About: {
-      screen: AboutScreen
-    },
     News: {
+      path: '/News',
       screen: NewsScreen
     },
+    Agenda: {
+      path: '/Agenda',
+      screen: AgendaScreen
+    },
     Codes: {
+      path: '/Codes',
       screen: CodesScreen
     },
+    Contact: {
+      path: '/Contact',
+      screen: ContactScreen
+    },
     Settings: {
+      path: '/Settings',
       screen: SettingsScreen
     }
   },
   {
-    tabBarComponent: TabBarTop,
-    tabBarPosition:'bottom',
-    tabBarOptions: {
-      showIcon: true,
-      pressOpacity: Config.bottomBarPressOpacity,
-      activeTintColor: Config.bottomBarSelectionColor,
-      inactiveTintColor: Config.bottomBarDefaultColor,
-      indicatorStyle: {
-        backgroundColor: 'transparent'
-      },
-      style: {
-        ...DesignUtils.getShadowStyle(4),
-        backgroundColor: Config.bottomBarBackgroundColor
-      }
+    initialRouteName: 'News',
+    contentOptions: {
+      activeTintColor: Config.MainColor
     },
-    lazy: true,
-    swipeEnabled: false,
-    animationEnabled: false,
-    initialRouteName: 'News'
+    contentComponent: DrawerContent
   }
 );
 
@@ -55,7 +46,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { loaded: false };
-    T.init().then(() => this.setState({ loaded: true }));
+    T.init().then(() => this.setState({ loaded: true }))
   }
 
   render() {
@@ -66,12 +57,9 @@ class App extends React.Component {
         </Text>
       );
     return (
-      <View style={{ flex:1 }}>
-        <Toolbar title='toolbar.sfi'/>
-        <TabNavigation/>
-      </View>
+      <DrawerNavigation/>
     );
   }
 }
-export default App;
 
+export default App;
