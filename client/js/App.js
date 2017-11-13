@@ -2,7 +2,7 @@ import React from 'react';
 import { DrawerNavigator } from 'react-navigation';
 import NewsScreen from './Screens/News/NewsScreen';
 import DrawerContent from './Drawer/DrawerContent';
-import ContactScreen from './Screens/Contact/ContactScreen';
+import AboutScreen from './Screens/About/AboutScreen';
 import CodesScreen from './Screens/Codes/CodesScreen';
 import AgendaScreen from './Screens/Agenda/AgendaScreen';
 import SettingsScreen from './Screens/Settings/SettingsScreen';
@@ -24,9 +24,9 @@ const DrawerNavigation = DrawerNavigator(
       path: '/Codes',
       screen: CodesScreen
     },
-    Contact: {
-      path: '/Contact',
-      screen: ContactScreen
+    About: {
+      path: '/About',
+      screen: AboutScreen
     },
     Settings: {
       path: '/Settings',
