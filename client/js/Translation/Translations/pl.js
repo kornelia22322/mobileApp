@@ -20,9 +20,8 @@ export default {
     remindLabel: 'Przypominaj o interesujących mnie wydarzeniach',
     language: 'Język'
   },
-  settingsPicker: {
-     pickerOne: '5 minut przed',
-     pickerTwo: 'Godzinę przed',
-     pickerThree: 'Trzy godziny przed'
+  settingsLanguages: {
+    pl: 'Polski',
+    en: 'Angielski'
   }
 };
